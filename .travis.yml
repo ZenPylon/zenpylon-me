@@ -11,8 +11,8 @@ jobs:
       script: npm build 
       name: "Test"
       script: npm test
-
-
+    - stage: "deploy"
+      script: "echo 'deploy here'"
 
 stages:
   - name: lint_test_build
