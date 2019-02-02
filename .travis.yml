@@ -8,7 +8,9 @@ jobs:
       name: 'Lint: Prettier'
       script: ./node_modules/prettier/bin-prettier.js --check src/**/*
     - stage: 'build'
+      script: npm run build
     - stage: 'test'
+      script: npm run test
     - stage: 'deploy'
       if: branch = master
       script: "echo 'deploy here'"
