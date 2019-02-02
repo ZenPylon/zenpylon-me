@@ -6,7 +6,7 @@ jobs:
     - stage: 'lint'
       if: branch = dev OR branch = master
       name: 'Lint: Prettier'
-      script: ./node_modules/prettier/bin-prettier.js
+      script: ./node_modules/prettier/bin-prettier.js --check src/**/*
     - stage: 'build'
     - stage: 'test'
     - stage: 'deploy'
