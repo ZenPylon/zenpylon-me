@@ -17,6 +17,7 @@
     "@ionic/core": "4.0.0"
   },
   "devDependencies": {
-    "@stencil/core": "0.17.0"
+    "@stencil/core": "0.17.0",
+    "prettier": "1.16.3"
   }
 }
