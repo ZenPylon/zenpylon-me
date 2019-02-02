@@ -5,6 +5,7 @@ node_js:
 jobs:
   include:
     - stage: "lint_test_build"
+      if: branch = dev OR branch = master
       name: "Lint: Prettier"
       script: ./node_modules/prettier/bin-prettier.js 
       name: "Build: App"
@@ -12,10 +13,6 @@ jobs:
       name: "Test"
       script: npm test
     - stage: "deploy"
+      if: branch = master
       script: "echo 'deploy here'"
-
-stages:
-  - name: lint_test_build
-  if: branch = dev OR branch = master
-  - name: deploy
-  if: branch = master
+  
