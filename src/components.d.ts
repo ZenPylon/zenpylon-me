@@ -4,23 +4,20 @@
  * It contains typing information for all components that exist in this project.
  */
 
+import "@stencil/core";
 
-import '@stencil/core';
-
-import '@ionic/core';
-import 'ionicons';
-
+import "@ionic/core";
+import "ionicons";
 
 export namespace Components {
-
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
   interface AppProfile {
-    'name': string;
+    name: string;
   }
   interface AppProfileAttributes extends StencilHTMLAttributes {
-    'name'?: string;
+    name?: string;
   }
 
   interface AppRoot {}
@@ -29,17 +26,16 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'AppHome': Components.AppHome;
-    'AppProfile': Components.AppProfile;
-    'AppRoot': Components.AppRoot;
+    AppHome: Components.AppHome;
+    AppProfile: Components.AppProfile;
+    AppRoot: Components.AppRoot;
   }
 
   interface StencilIntrinsicElements {
-    'app-home': Components.AppHomeAttributes;
-    'app-profile': Components.AppProfileAttributes;
-    'app-root': Components.AppRootAttributes;
+    "app-home": Components.AppHomeAttributes;
+    "app-profile": Components.AppProfileAttributes;
+    "app-root": Components.AppRootAttributes;
   }
-
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -47,7 +43,9 @@ declare global {
     new (): HTMLAppHomeElement;
   };
 
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
+  interface HTMLAppProfileElement
+    extends Components.AppProfile,
+      HTMLStencilElement {}
   var HTMLAppProfileElement: {
     prototype: HTMLAppProfileElement;
     new (): HTMLAppProfileElement;
@@ -60,17 +58,16 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement
-    'app-profile': HTMLAppProfileElement
-    'app-root': HTMLAppRootElement
+    "app-home": HTMLAppHomeElement;
+    "app-profile": HTMLAppProfileElement;
+    "app-root": HTMLAppRootElement;
   }
 
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-    'app-profile': HTMLAppProfileElement;
-    'app-root': HTMLAppRootElement;
+    "app-home": HTMLAppHomeElement;
+    "app-profile": HTMLAppProfileElement;
+    "app-root": HTMLAppRootElement;
   }
-
 
   export namespace JSX {
     export interface Element {}
@@ -79,5 +76,4 @@ declare global {
     }
   }
   export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
