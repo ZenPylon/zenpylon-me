@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - node
+  - 'lts/*'
+jobs:
+  include:
+    - stage: "lint_test_build"
+      name: "Lint: Prettier"
+      script: ./node_modules/prettier/bin-prettier.js 
+      name: "Build: App"
+      script: npm build 
+      name: "Test"
+      script: npm test
+
+
+
+stages:
+  - name: lint_test_build
+  if: branch = dev OR branch = master
+  - name: deploy
+  if: branch = master
