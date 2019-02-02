@@ -1,15 +1,12 @@
 language: node_js
 jobs:
   include:
-    - stage: "lint_test_build"
+    - stage: 'lint'
       if: branch = dev OR branch = master
-      name: "Lint: Prettier"
-      script: ./node_modules/prettier/bin-prettier.js 
-      name: "Build: App"
-      script: npm build 
-      name: "Test"
-      script: npm test
-    - stage: "deploy"
+      name: 'Lint: Prettier'
+      script: ./node_modules/prettier/bin-prettier.js
+    - stage: 'build'
+    - stage: 'test'
+    - stage: 'deploy'
       if: branch = master
       script: "echo 'deploy here'"
-  
