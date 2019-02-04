@@ -17,4 +17,5 @@ jobs:
       script: npm run test
     - stage: deploy
       if: branch = master
+      script: npm run build
       script: 'firebase deploy --only hosting --token $FIREBASE_DEPLOY_KEY -m "${TRAVIS_COMMIT}: ${TRAVIS_COMMIT_MESSAGE}"'
