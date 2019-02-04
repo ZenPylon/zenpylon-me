@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "deploy": "firebase deploy --only hosting",
+    "deploy": "firebase deploy --only hosting --token $FIREBASE_DEPLOY_KEY -m \"${TRAVIS_COMMIT}: ${TRAVIS_COMMIT_MESSAGE}\"",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch"
