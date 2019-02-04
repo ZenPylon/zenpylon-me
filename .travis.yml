@@ -11,12 +11,5 @@ jobs:
       script: npm run build
     - stage: test
       script: npm run test
-deploy:
-  provider: firebase
-  token:
-    secure: iia7UsrGdvEZ1kjnXnI/0s1OrQPipgzJKc0cZXc/EJSOLdVudSvrl8XULu/fUmEfylfzAevZPMdq3BrU93jyq5XE/x+qDTSu7Mst7RNkeiSbh1F/RNbu39XL+9QDqqL5d/p7/55WerV0Il7RpBmi+bQAkQ+jkfooT32Cg0T8ovduKoDlo8Ma8Eg1FgBAxsLwrBVtYVb3CMuRyZvrpXokF8lSvr6MvOh4r6Uh1gvpufxODhDamVKBM7PxgZR1QDWAF2OKeEpv6zj4E9xUXFbQXnpkKf4LgESFQsRxNkzThu890srI0ES7tiu70XgZWePJu8m5k2PrWvx+nSDm6TMn0pHaQxwogJmfvL+Sboulere48ydLDr8yTXUAmzmvI7Tz1zFpR3zJVIe09xh+TJ7QDPvbkNo5YubwHihX6y3X1ivcgLQaVILOBzCOAno2g31tsdfOPdMikUO5RmLZ0Bva+KluPF3mnJtxOURFb4zW22LaBbMQjIMAB+fpy2RcaRlz8K0PSmK46+jTr/hPfCa5IhuIFnZm4Lo+zLl3ufZKuZtNjqFVDyxkObv3N1bYaKfAFd4YZGfDR6bIwwFPwg3e5S2+niY2by5Gs6xnTBdGxWBbEHu0KKjDsEnvlyLQQxDQAILnpGrWVowcxyxuefV2q7cOwdI4KeYF9pSpBdioFKU=
-  on:
-    branch: master
-env:
-  global:
-    secure: iia7UsrGdvEZ1kjnXnI/0s1OrQPipgzJKc0cZXc/EJSOLdVudSvrl8XULu/fUmEfylfzAevZPMdq3BrU93jyq5XE/x+qDTSu7Mst7RNkeiSbh1F/RNbu39XL+9QDqqL5d/p7/55WerV0Il7RpBmi+bQAkQ+jkfooT32Cg0T8ovduKoDlo8Ma8Eg1FgBAxsLwrBVtYVb3CMuRyZvrpXokF8lSvr6MvOh4r6Uh1gvpufxODhDamVKBM7PxgZR1QDWAF2OKeEpv6zj4E9xUXFbQXnpkKf4LgESFQsRxNkzThu890srI0ES7tiu70XgZWePJu8m5k2PrWvx+nSDm6TMn0pHaQxwogJmfvL+Sboulere48ydLDr8yTXUAmzmvI7Tz1zFpR3zJVIe09xh+TJ7QDPvbkNo5YubwHihX6y3X1ivcgLQaVILOBzCOAno2g31tsdfOPdMikUO5RmLZ0Bva+KluPF3mnJtxOURFb4zW22LaBbMQjIMAB+fpy2RcaRlz8K0PSmK46+jTr/hPfCa5IhuIFnZm4Lo+zLl3ufZKuZtNjqFVDyxkObv3N1bYaKfAFd4YZGfDR6bIwwFPwg3e5S2+niY2by5Gs6xnTBdGxWBbEHu0KKjDsEnvlyLQQxDQAILnpGrWVowcxyxuefV2q7cOwdI4KeYF9pSpBdioFKU=
+    - stage: deploy
+      script: 'firebase deploy --only hosting --token $FIREBASE_DEPLOY_KEY -m "$TRAVIS_COMMIT: $TRAVIS_COMMIT_MESSAGE"'
