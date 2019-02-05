@@ -2,8 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.scss',
-  shadow: true
+  styleUrl: 'app-home.scss'
 })
 export class AppHome {
   render() {
@@ -18,8 +17,8 @@ export class AppHome {
         <p>Coming soon to a website near you.</p>
 
         <ion-grid>
-          <ion-row class="logo-row" align-self-center>
-            <ion-col justify-content-center>
+          <ion-row class="logo-row" justify-content-center>
+            <ion-col size="6">
               <img src="/assets/logo.jpg" />
             </ion-col>
           </ion-row>
