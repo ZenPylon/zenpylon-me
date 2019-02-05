@@ -16,9 +16,13 @@ export class AppHome {
       <ion-content padding>
         <p>Coming soon to a website near you.</p>
 
-        <ion-button href="/profile/ionic" expand="block">
-          Profile page
-        </ion-button>
+        <ion-grid>
+          <ion-row align-self-center>
+            <ion-col justify-content-center>
+              <img src="/assets/logo.jpg" />
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-content>
     ];
   }
