@@ -1,3 +1,7 @@
 :root {
-  --app-primary-color: rgba(0, 0, 0, 0.8);
+  $colors: (
+    $primary: rgba(8, 114, 235, 0),
+    $dark: rgba(0, 0, 0, 0.8),
+    $light: rgb(255, 255, 255)
+  );
 }
