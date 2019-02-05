@@ -7,7 +7,7 @@ export const config: Config = {
   globalStyle: 'src/global/app.scss',
   plugins: [
     sass({
-      injectGlobalPaths: ['src/global/variables/scss']
+      injectGlobalPaths: ['src/global/variables.scss']
     })
   ]
 };
