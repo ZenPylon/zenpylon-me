@@ -1,9 +1,13 @@
 import { Config } from '@stencil/core';
-
-// https://stenciljs.com/docs/config
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   outputTargets: [{ type: 'www' }],
   globalScript: 'src/global/app.ts',
-  globalStyle: 'src/global/app.css'
+  globalStyle: 'src/global/app.scss',
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/global/variables/scss']
+    })
+  ]
 };
