@@ -1,5 +1,21 @@
 app-home {
+  font-weight: 350;
+
   .logo-row {
     height: 50%;
+  }
+  .zenpylon-header {
+    font-size: 4.5rem;
+    letter-spacing: 0.5rem;
+    padding-left: 1rem;
+  }
+  .values-row {
+    font-size: 3rem;
+  }
+  .social-media {
+    color: teal;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
   }
 }
