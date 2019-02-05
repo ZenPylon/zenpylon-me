@@ -18,7 +18,7 @@ export class AppHome {
 
         <ion-grid>
           <ion-row class="logo-row" justify-content-center>
-            <ion-col size="6">
+            <ion-col text-center size="6">
               <img src="/assets/logo.jpg" />
             </ion-col>
           </ion-row>
