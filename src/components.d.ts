@@ -16,6 +16,9 @@ export namespace Components {
   interface AppAbout {}
   interface AppAboutAttributes extends StencilHTMLAttributes {}
 
+  interface AppHeader {}
+  interface AppHeaderAttributes extends StencilHTMLAttributes {}
+
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
@@ -29,6 +32,7 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AppAbout': Components.AppAbout;
+    'AppHeader': Components.AppHeader;
     'AppHome': Components.AppHome;
     'AppPlayground': Components.AppPlayground;
     'AppRoot': Components.AppRoot;
@@ -36,6 +40,7 @@ declare global {
 
   interface StencilIntrinsicElements {
     'app-about': Components.AppAboutAttributes;
+    'app-header': Components.AppHeaderAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-playground': Components.AppPlaygroundAttributes;
     'app-root': Components.AppRootAttributes;
@@ -46,6 +51,12 @@ declare global {
   var HTMLAppAboutElement: {
     prototype: HTMLAppAboutElement;
     new (): HTMLAppAboutElement;
+  };
+
+  interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {}
+  var HTMLAppHeaderElement: {
+    prototype: HTMLAppHeaderElement;
+    new (): HTMLAppHeaderElement;
   };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
@@ -68,6 +79,7 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'app-about': HTMLAppAboutElement
+    'app-header': HTMLAppHeaderElement
     'app-home': HTMLAppHomeElement
     'app-playground': HTMLAppPlaygroundElement
     'app-root': HTMLAppRootElement
@@ -75,6 +87,7 @@ declare global {
 
   interface ElementTagNameMap {
     'app-about': HTMLAppAboutElement;
+    'app-header': HTMLAppHeaderElement;
     'app-home': HTMLAppHomeElement;
     'app-playground': HTMLAppPlaygroundElement;
     'app-root': HTMLAppRootElement;
