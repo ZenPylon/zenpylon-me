@@ -1,6 +1,9 @@
 app-home {
-  .logo-row {
-    height: 42%;
+  .logo-col {
+    background-image: url('/assets/logo.jpg');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .zenpylon-header {
     font-weight: 350;
