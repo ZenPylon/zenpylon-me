@@ -22,13 +22,13 @@ export class AppHome {
               </h1>
             </ion-col>
           </ion-row>
-          <ion-row class="logo-row" justify-content-center>
+          <ion-row justify-content-center>
             <ion-col class="logo-col" text-center size="6" />
           </ion-row>
           <ion-row text-center class="values-row">
             <ion-col>Code, Creativity, Curiosity</ion-col>
           </ion-row>
-          <ion-row text-center justify-content-center>
+          <ion-row class="social-media-row" text-center justify-content-center>
             <ion-col
               no-padding
               class="social-media separator"

@@ -22,11 +22,11 @@ app-home {
     font-size: 2.5rem;
   }
   .separator {
-    height: 50%;
     border-right: rgba(0, 0, 0, 0.3) 1px solid;
   }
-  .social-media {
-    a {
+  .social-media-row {
+    height: 15%;
+    ion-col a {
       color: teal;
       font-size: 1rem;
       font-weight: 300;
