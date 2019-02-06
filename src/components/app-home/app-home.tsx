@@ -2,7 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.scss'
+  styleUrl: 'app-home.scss',
 })
 export class AppHome {
   render() {
@@ -31,18 +31,36 @@ export class AppHome {
             <ion-col>Code, Creativity, Curiosity</ion-col>
           </ion-row>
           <ion-row text-center justify-content-center>
-            <ion-col no-padding class="social-media separator" size="1">
+            <ion-col
+              no-padding
+              class="social-media separator"
+              size-lg="1"
+              size-md="2"
+              size-xs="3"
+            >
               <a href="https://github.com/zenpylon">Github</a>
             </ion-col>
-            <ion-col no-padding class="social-media separator" size="1">
+            <ion-col
+              no-padding
+              class="social-media separator"
+              size-lg="1"
+              size-md="2"
+              size-xs="3"
+            >
               <a href="https://www.linkedin.com/in/ajdecker1022/">LinkedIn</a>
             </ion-col>
-            <ion-col no-padding class="social-media" size="1">
+            <ion-col
+              no-padding
+              class="social-media"
+              size-lg="1"
+              size-md="2"
+              size-xs="3"
+            >
               <a href="https://twitter.com/ZenPylon">Twitter</a>
             </ion-col>
           </ion-row>
         </ion-grid>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }
