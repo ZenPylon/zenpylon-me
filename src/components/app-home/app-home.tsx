@@ -9,7 +9,17 @@ export class AppHome {
     return [
       <ion-header>
         <ion-toolbar color="dark">
-          <ion-title>Home</ion-title>
+          <ion-buttons slot="end">
+            <ion-button expand="full" padding>
+              Home
+            </ion-button>
+            <ion-button expand="full" padding>
+              Playground
+            </ion-button>
+            <ion-button expand="full" padding>
+              About
+            </ion-button>
+          </ion-buttons>
         </ion-toolbar>
       </ion-header>,
 
