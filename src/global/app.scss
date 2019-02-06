@@ -28,7 +28,25 @@
 
   More info about color theming using Ionic:
   https://beta.ionicframework.com/docs/theming/color-generator
+
 */
+
+html {
+  .main-header {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 320px) {
+    .main-header {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .main-header {
+      font-size: 22px;
+    }
+  }
+}
+
 :root {
   --ion-color-primary: #0d5d56;
   --ion-color-primary-rgb: 13, 93, 86;
