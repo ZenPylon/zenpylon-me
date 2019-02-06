@@ -22,7 +22,7 @@ export class AppHome {
               </h1>
             </ion-col>
           </ion-row>
-          <ion-row justify-content-center>
+          <ion-row class="logo-row" justify-content-center>
             <ion-col class="logo-col" text-center size="6" />
           </ion-row>
           <ion-row text-center class="values-row">

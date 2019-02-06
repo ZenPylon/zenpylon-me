@@ -1,4 +1,10 @@
 app-home {
+  ion-grid {
+    height: 100%;
+  }
+  .logo-row {
+    height: 50%;
+  }
   .logo-col {
     background-image: url('/assets/logo.jpg');
     background-position: center center;
