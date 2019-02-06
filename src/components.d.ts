@@ -13,6 +13,9 @@ import 'ionicons';
 
 export namespace Components {
 
+  interface AppAbout {}
+  interface AppAboutAttributes extends StencilHTMLAttributes {}
+
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
@@ -25,17 +28,25 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AppAbout': Components.AppAbout;
     'AppHome': Components.AppHome;
     'AppPlayground': Components.AppPlayground;
     'AppRoot': Components.AppRoot;
   }
 
   interface StencilIntrinsicElements {
+    'app-about': Components.AppAboutAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-playground': Components.AppPlaygroundAttributes;
     'app-root': Components.AppRootAttributes;
   }
 
+
+  interface HTMLAppAboutElement extends Components.AppAbout, HTMLStencilElement {}
+  var HTMLAppAboutElement: {
+    prototype: HTMLAppAboutElement;
+    new (): HTMLAppAboutElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -56,12 +67,14 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'app-about': HTMLAppAboutElement
     'app-home': HTMLAppHomeElement
     'app-playground': HTMLAppPlaygroundElement
     'app-root': HTMLAppRootElement
   }
 
   interface ElementTagNameMap {
+    'app-about': HTMLAppAboutElement;
     'app-home': HTMLAppHomeElement;
     'app-playground': HTMLAppPlaygroundElement;
     'app-root': HTMLAppRootElement;
