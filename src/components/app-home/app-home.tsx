@@ -7,21 +7,7 @@ import { Component } from '@stencil/core';
 export class AppHome {
   render() {
     return [
-      <ion-header>
-        <ion-toolbar color="dark">
-          <ion-buttons slot="end">
-            <ion-button href="/" padding>
-              Home
-            </ion-button>
-            <ion-button href="playground" padding>
-              Playground
-            </ion-button>
-            <ion-button href="about" padding>
-              About
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>,
+      <app-header />,
 
       <ion-content padding>
         <ion-grid>
