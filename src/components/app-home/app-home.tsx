@@ -10,9 +10,15 @@ export class AppHome {
       <ion-header>
         <ion-toolbar color="dark">
           <ion-buttons slot="end">
-            <ion-button padding>Home</ion-button>
-            <ion-button padding>Playground</ion-button>
-            <ion-button padding>About</ion-button>
+            <ion-button href="/" padding>
+              Home
+            </ion-button>
+            <ion-button href="playground" padding>
+              Playground
+            </ion-button>
+            <ion-button href="about" padding>
+              About
+            </ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>,
