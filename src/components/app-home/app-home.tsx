@@ -17,7 +17,11 @@ export class AppHome {
         <ion-grid>
           <ion-row>
             <ion-col>
-              <h1 class="zenpylon-header" text-center text-uppercase>
+              <h1
+                class="main-header zenpylon-header"
+                text-center
+                text-uppercase
+              >
                 zen pylon
               </h1>
             </ion-col>

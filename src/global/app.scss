@@ -34,16 +34,18 @@
 html {
   .main-header {
     font-weight: 350;
-    font-size: 16px;
+    font-size: 35px;
   }
   @media screen and (min-width: 320px) {
     .main-header {
-      font-size: calc(16px + 34 * ((100vw - 320px) / 680));
+      font-size: calc(35px + 50 * ((100vw - 320px) / 680));
+    }
+    .sub-header {
     }
   }
   @media screen and (min-width: 1000px) {
     .main-header {
-      font-size: 50px;
+      font-size: 75px;
     }
   }
 }
