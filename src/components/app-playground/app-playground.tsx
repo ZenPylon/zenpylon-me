@@ -6,6 +6,11 @@ import { Component } from '@stencil/core';
 })
 export class AppPlayground {
   render() {
-    return <p>Hello, playgroundy!</p>;
+    return [
+      <app-header />,
+      <ion-content>
+        <p>Playground</p>
+      </ion-content>,
+    ];
   }
 }
