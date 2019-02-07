@@ -32,20 +32,27 @@
 */
 
 html {
-  .main-header {
+  .header-1 {
     font-weight: 350;
     font-size: 35px;
   }
+  .header-2 {
+    font-size: 25px;
+  }
   @media screen and (min-width: 320px) {
-    .main-header {
+    .header-1 {
       font-size: calc(35px + 50 * ((100vw - 320px) / 680));
     }
-    .sub-header {
+    .header-2 {
+      font-size: calc(25px + 25 * ((100vw - 320px) / 680));
     }
   }
   @media screen and (min-width: 1000px) {
-    .main-header {
+    .header-1 {
       font-size: 75px;
+    }
+    .header-2 {
+      font-size: 50px;
     }
     ion-header ion-buttons {
       padding-right: 10%;
