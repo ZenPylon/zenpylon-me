@@ -13,11 +13,7 @@ export class AppHome {
         <ion-grid>
           <ion-row>
             <ion-col>
-              <h1
-                class="main-header zenpylon-header"
-                text-center
-                text-uppercase
-              >
+              <h1 class="header-1 zenpylon-header" text-center text-uppercase>
                 zen pylon
               </h1>
             </ion-col>
@@ -25,7 +21,7 @@ export class AppHome {
           <ion-row class="logo-row" justify-content-center>
             <ion-col class="logo-col" text-center size="12" />
           </ion-row>
-          <ion-row text-center align-items-center class="values-row">
+          <ion-row text-center align-items-center class="header-2 values-row">
             <ion-col>Code, Creativity, Curiosity</ion-col>
           </ion-row>
           <ion-row
