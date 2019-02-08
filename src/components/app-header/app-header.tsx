@@ -4,6 +4,9 @@ import { Component, State, Listen } from '@stencil/core';
   tag: 'app-header',
 })
 export class AppHeader {
+  constructor() {
+    this.handleResize();
+  }
   @State() isSmallScreen: boolean;
 
   @Listen('window:resize')
