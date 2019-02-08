@@ -45,9 +45,7 @@ html {
     font-size: 25px;
   }
   p {
-    font-size: 16px;
     font-weight: 200;
-    line-height: 23px;
   }
 
   @media screen and (min-width: 320px) {
@@ -56,6 +54,10 @@ html {
     }
     .header-2 {
       font-size: calc(25px + 25 * ((100vw - 320px) / 680));
+    }
+    p {
+      font-size: calc(14px + 2 * ((100vw - 320px) / 680));
+      line-height: calc(17px + 6 * ((100vw - 320px) / 680));
     }
   }
   @media screen and (min-width: 1000px) {
@@ -67,6 +69,10 @@ html {
     }
     ion-header ion-buttons {
       padding-right: 10%;
+    }
+    p {
+      font-size: 16px;
+      line-height: 23px;
     }
   }
 }
