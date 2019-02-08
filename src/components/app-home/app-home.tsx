@@ -12,7 +12,7 @@ export class AppHome {
       <ion-content padding>
         <ion-grid>
           <ion-row class="header-row">
-            <ion-col>
+            <ion-col align-self-center>
               <h1 class="header-1 zenpylon-header" text-center text-uppercase>
                 zen pylon
               </h1>
