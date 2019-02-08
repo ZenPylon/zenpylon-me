@@ -2,8 +2,11 @@ app-home {
   ion-grid {
     height: 100%;
   }
+  .header-row {
+    height: 20%;
+  }
   .logo-row {
-    height: 50%;
+    height: 52%;
   }
   .logo-col {
     background-image: url('/assets/logo.jpg');
