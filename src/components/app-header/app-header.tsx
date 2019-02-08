@@ -8,7 +8,7 @@ export class AppHeader {
 
   @Listen('window:resize')
   handleResize() {
-    this.isSmallScreen = document.documentElement.clientWidth < 500;
+    this.isSmallScreen = document.documentElement.clientWidth < 700;
   }
 
   render() {
