@@ -9,7 +9,16 @@ export class AppPlayground {
     return [
       <app-header />,
       <ion-content>
-        <p>Playground</p>
+        <ion-grid>
+          <ion-row justify-content-center align-items-center>
+            <ion-col>
+              <header class="header-2">Projects</header>
+            </ion-col>
+          </ion-row>
+          <ion-row justify-content-center align-items-center>
+            <ion-col />
+          </ion-row>
+        </ion-grid>
       </ion-content>,
     ];
   }
