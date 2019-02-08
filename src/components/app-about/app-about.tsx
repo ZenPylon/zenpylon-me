@@ -10,12 +10,10 @@ export class AppAbout {
       <app-header />,
       <ion-content>
         <ion-grid text-center>
-          <ion-row>
-            <ion-col>
-              <h1>Photo here</h1>
-            </ion-col>
+          <ion-row align-items-center class="photo-row">
+            <ion-col class="photo-col background-img" />
           </ion-row>
-          <ion-row>
+          <ion-row align-items-center class="bio-row">
             <ion-col size-lg="7" size-xs="12">
               <p>bio here</p>
             </ion-col>
