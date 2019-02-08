@@ -32,6 +32,11 @@
 */
 
 html {
+  .background-img {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .header-1 {
     font-weight: 350;
     font-size: 35px;

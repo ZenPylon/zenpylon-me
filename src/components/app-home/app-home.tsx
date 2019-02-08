@@ -19,7 +19,7 @@ export class AppHome {
             </ion-col>
           </ion-row>
           <ion-row class="logo-row" justify-content-center>
-            <ion-col class="logo-col" text-center size="12" />
+            <ion-col class="logo-col background-img" text-center size="12" />
           </ion-row>
           <ion-row text-center align-items-center class="header-2 values-row">
             <ion-col>Code, Creativity, Curiosity</ion-col>
