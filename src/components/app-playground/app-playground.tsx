@@ -9,7 +9,7 @@ export class AppPlayground {
     return [
       <app-header />,
       <ion-content>
-        <ion-grid>
+        <ion-grid padding>
           <header>
             <ion-row justify-content-center align-items-center>
               <ion-col class="header-2">Projects</ion-col>
