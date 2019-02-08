@@ -9,12 +9,17 @@ export class AppAbout {
     return [
       <app-header />,
       <ion-content>
-        <ion-grid text-center>
+        <ion-grid padding text-center>
           <ion-row align-items-center class="photo-row">
             <ion-col class="photo-col background-img" />
           </ion-row>
-          <ion-row align-items-center justify-content-center class="bio-row">
-            <ion-col size-lg="4" size-xs="10">
+          <ion-row
+            padding
+            align-items-center
+            justify-content-center
+            class="bio-row"
+          >
+            <ion-col class="bio-col" size-lg="5" size-xs="10">
               <p>
                 I’m a software engineer at Wellio. I do full-stack mobile and
                 web development using tools like Ionic, Angular, Firestore, and
