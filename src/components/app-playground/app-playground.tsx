@@ -10,14 +10,21 @@ export class AppPlayground {
       <app-header />,
       <ion-content>
         <ion-grid>
-          <ion-row justify-content-center align-items-center>
-            <ion-col>
-              <header class="header-2">Projects</header>
-            </ion-col>
-          </ion-row>
-          <ion-row justify-content-center align-items-center>
-            <ion-col />
-          </ion-row>
+          <header>
+            <ion-row justify-content-center align-items-center>
+              <ion-col class="header-2">Projects</ion-col>
+            </ion-row>
+            <ion-row justify-content-center align-items-center>
+              <ion-col />
+            </ion-row>
+          </header>
+          <section>
+            <ion-row>
+              <ion-col>
+                <p>Are you content without content?</p>
+              </ion-col>
+            </ion-row>
+          </section>
         </ion-grid>
       </ion-content>,
     ];
