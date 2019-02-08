@@ -15,7 +15,13 @@ export class AppAbout {
           </ion-row>
           <ion-row align-items-center class="bio-row">
             <ion-col size-lg="7" size-xs="12">
-              <p>bio here</p>
+              <p>
+                I’m a software engineer at Wellio. I do full-stack mobile and
+                web development using tools like Ionic, Angular, Firestore, and
+                Flask. Outside of work, I enjoy math, music, and meditation.
+                Much of my perspective is informed by my experience with Bipolar
+                II. I aspire to be grounded, compassionate, and perceptive.
+              </p>
             </ion-col>
           </ion-row>
         </ion-grid>
