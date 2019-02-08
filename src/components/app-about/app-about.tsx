@@ -13,8 +13,8 @@ export class AppAbout {
           <ion-row align-items-center class="photo-row">
             <ion-col class="photo-col background-img" />
           </ion-row>
-          <ion-row align-items-center class="bio-row">
-            <ion-col size-lg="7" size-xs="12">
+          <ion-row align-items-center justify-content-center class="bio-row">
+            <ion-col size-lg="6" size-xs="10">
               <p>
                 I’m a software engineer at Wellio. I do full-stack mobile and
                 web development using tools like Ionic, Angular, Firestore, and
