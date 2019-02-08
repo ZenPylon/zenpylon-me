@@ -9,7 +9,7 @@ export class AppAbout {
     return [
       <app-header />,
       <ion-content>
-        <ion-grid>
+        <ion-grid text-center>
           <ion-row>
             <ion-col>
               <h1>Photo here</h1>
