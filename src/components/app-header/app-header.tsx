@@ -8,7 +8,7 @@ export class AppHeader {
 
   @Listen('window:resize')
   handleResize() {
-    this.isSmallScreen = document.documentElement.clientWidth < 700;
+    this.isSmallScreen = document.documentElement.clientWidth < 500;
   }
 
   render() {
@@ -16,7 +16,9 @@ export class AppHeader {
       return (
         <ion-header>
           <ion-toolbar color="dark">
-            <ion-buttons>{this.getButtonElements()}</ion-buttons>
+            <ion-buttons justify-content-center>
+              {this.getButtonElements()}
+            </ion-buttons>
           </ion-toolbar>
         </ion-header>
       );
