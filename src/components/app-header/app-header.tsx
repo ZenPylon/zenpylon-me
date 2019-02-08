@@ -1,12 +1,18 @@
-import { Component } from '@stencil/core';
+import { Component, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'app-header',
 })
 export class AppHeader {
+  @State() isSmallScreen: boolean;
+
+  @Listen('window:resize')
+  handleResize() {
+    this.isSmallScreen = document.documentElement.clientWidth < 700;
+  }
+
   render() {
-    const isSmallScreen = document.documentElement.clientWidth < 700;
-    if (isSmallScreen) {
+    if (this.isSmallScreen) {
       return (
         <ion-header>
           <ion-toolbar color="dark">
