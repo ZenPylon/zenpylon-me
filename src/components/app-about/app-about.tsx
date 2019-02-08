@@ -19,7 +19,7 @@ export class AppAbout {
             justify-content-center
             class="bio-row"
           >
-            <ion-col class="bio-col" size-md="6" size-xs="10">
+            <ion-col size-md="6" size-lg="5" size-xs="10">
               <p>
                 I’m a software engineer at Wellio. I do full-stack mobile and
                 web development using tools like Ionic, Angular, Firestore, and
