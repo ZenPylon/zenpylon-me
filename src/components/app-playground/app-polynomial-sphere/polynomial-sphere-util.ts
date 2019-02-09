@@ -15,7 +15,15 @@ interface QuadraticCoefficients {
 export class PolynomialSphereUtil {
   private static faceIndices = ['a', 'b', 'c'];
 
-  public static createIcoSphere(
+  /**
+   * Creates an icosphere with colors based on the vertex --> coefficient --> color map function.
+   *
+   * @param radius The readius of the sphere to create.
+   * @param detail The resolution of the sphere to create.  Note: higher values can be quite slow.
+   * @param colorMapName The color map name, e.g. 'rainbow'.
+   * @param colorMapResolution The resolution of the color map.
+   */
+  public static createPolynomialIcoSphere(
     radius: number,
     detail: number,
     colorMapName: string,
