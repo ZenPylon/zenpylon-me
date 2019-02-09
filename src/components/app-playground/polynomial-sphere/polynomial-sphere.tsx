@@ -6,6 +6,17 @@ import { Component } from '@stencil/core';
 })
 export class PolynomialSphere {
   render() {
-    return <p>Polynomial sphere</p>;
+    return [
+      <app-header />,
+      <ion-content>
+        <ion-grid>
+          <header>
+            <ion-row justify-content-center align-items-center>
+              <ion-col class="header-2">Polynomial Sphere</ion-col>
+            </ion-row>
+          </header>
+        </ion-grid>
+      </ion-content>,
+    ];
   }
 }
