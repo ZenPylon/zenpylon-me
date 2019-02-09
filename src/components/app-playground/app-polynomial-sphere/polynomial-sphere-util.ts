@@ -4,8 +4,20 @@ interface DiscriminantExtrema {
   min: number;
   max: number;
 }
+
+interface QuadraticCoefficients {
+  a: number;
+  b: number;
+  c: number;
+};
+
 export class PolynomialSphereUtil {
-  public static createIcoSphere(radius: number, detail: number, colorMapName: string, colorMapResolution: number) {
+  public static createIcoSphere(
+    radius: number,
+    detail: number,
+    colorMapName: string,
+    colorMapResolution: number,
+  ) {
     const icoSphere = new IcosahedronGeometry(radius, detail);
     const extrema = this.getSphereExtrema(icoSphere);
     const faceIndices = ['a', 'b', 'c'];
@@ -18,12 +30,9 @@ export class PolynomialSphereUtil {
 
       for (let j = 0; j < 3; j++) {
         const vertexIndex = f[faceIndices[j]];
-        const p = icoSphere.vertices[vertexIndex];
-        const coefA = p.x;
-        const coefB = p.y;
-        const coefC = p.z;
+        const coefficients = this.coefficientsFromVertex(icoSphere.vertices[vertexIndex]);
         const discriminant = Math.sqrt(
-          Math.abs(coefB * coefB - 4 * coefA * coefC),
+          Math.abs(coefficients.b * coefficients.b - 4 * coefficients.a * coefficients.c),
         );
         f.vertexColors[j] = colorMap.getColor(discriminant);
       }
@@ -66,6 +75,14 @@ export class PolynomialSphereUtil {
     }
   }
 
+  private static coefficientsFromVertex(vertex: any): QuadraticCoefficients {
+    return {
+      a: vertex.x,
+      b: vertex.y,
+      c: vertex.z,
+    };
+  }
+
   private placeholder() {
     const material = new THREE.MeshPhongMaterial({
       color: 0xffffff,
@@ -83,5 +100,4 @@ export class PolynomialSphereUtil {
     this.scene.add(mesh);
   }
 
-  }
-}
+  
