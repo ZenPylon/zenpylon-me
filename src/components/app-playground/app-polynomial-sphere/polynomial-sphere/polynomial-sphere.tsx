@@ -47,7 +47,7 @@ export class PolynomialSphere {
   }
 
   render() {
-    return <p>Sphere placeholder</p>;
+    return <canvas />;
   }
 
   private createSphere() {
