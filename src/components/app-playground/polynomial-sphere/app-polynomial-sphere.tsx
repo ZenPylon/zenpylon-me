@@ -1,8 +1,8 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'polynomial-sphere',
-  styleUrl: 'polynomial-sphere.scss',
+  tag: 'app-polynomial-sphere',
+  styleUrl: 'app-polynomial-sphere.scss',
 })
 export class PolynomialSphere {
   render() {
@@ -39,9 +39,7 @@ export class PolynomialSphere {
               </section>
             </ion-col>
             <ion-col text-center size-md="6" size-lg="5" size-xs="10">
-              <section>
-                <p>Canvas</p>
-              </section>
+              <section />
             </ion-col>
           </ion-row>
           <section />
