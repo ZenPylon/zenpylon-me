@@ -11,7 +11,7 @@ export class PolynomialSphere {
       <ion-content>
         <ion-grid>
           <header>
-            <ion-row justify-content-center align-items-center>
+            <ion-row text-center justify-content-center align-items-center>
               <ion-col class="header-2">Polynomial Sphere</ion-col>
             </ion-row>
           </header>
