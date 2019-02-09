@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import { Component, Element } from '@stencil/core';
 import {
   Mesh,
   MeshPhongMaterial,
@@ -7,6 +7,8 @@ import {
   VertexColors,
   Color,
   AmbientLight,
+  Renderer,
+  WebGLRenderer,
 } from 'three';
 
 import { PolynomialSphereUtil } from './polynomial-sphere-util';
@@ -19,7 +21,10 @@ export class PolynomialSphere {
   public colorMapResolution = 512;
   public mesh: Mesh;
   public radius = 200;
+  public renderer: Renderer;
   public scene: Scene;
+
+  @Element() private element: HTMLElement;
 
   constructor() {
     const ambientLight = new AmbientLight(0xaaaaaa);
@@ -28,6 +33,17 @@ export class PolynomialSphere {
     this.scene = new Scene();
     this.scene.background = new Color(0x000000);
     this.scene.add(ambientLight);
+    this.createSphere();
+  }
+
+  componentDidLoad() {
+    const canvasElement = this.element.querySelector('canvas');
+    this.renderer = new WebGLRenderer({
+      antialias: true,
+      canvas: canvasElement,
+    });
+
+    this.renderer.setSize(400, 400);
   }
 
   render() {
@@ -53,6 +69,7 @@ export class PolynomialSphere {
       wireframe: true,
       transparent: true,
     });
+    wireframeMaterial.blending;
     this.mesh = new Mesh(icoSphere.sphere, material);
     this.mesh.position.x = 0;
     this.scene.add(this.mesh);
