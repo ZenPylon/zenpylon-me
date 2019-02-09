@@ -55,13 +55,8 @@ export class PolynomialSphereUtil {
 
       for (let j = 0; j < faceIndices.length; j++) {
         vertexIndex = f[faceIndices[j]];
-        p = icoSphere.vertices[vertexIndex];
-        const coefA = p.x;
-        const coefB = p.y;
-        const coefC = p.z;
-        const discriminant = Math.sqrt(
-          Math.abs(coefB * coefB - 4 * coefA * coefC),
-        );
+        const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
+        const discriminant = this.getDiscriminantMagnitude(coefficients);
 
         if (discriminant > extrema.max || extrema.max === null) {
           extrema.max = discriminant;
@@ -75,12 +70,22 @@ export class PolynomialSphereUtil {
     }
   }
 
-  private static coefficientsFromVertex(vertex: any): QuadraticCoefficients {
+  private static getCoefficientsFromVertex(vertex: any): QuadraticCoefficients {
     return {
       a: vertex.x,
       b: vertex.y,
       c: vertex.z,
     };
+  }
+
+  /**
+   * Returns the magnitude of the discriminant (i.e. the absolute value)
+   * @param coefficients The coefficients that determint the quadratic equation.
+   */
+  private static getDiscriminantMagnitude(coefficients: QuadraticCoefficients): number {
+    return Math.sqrt(
+      Math.abs(coefficients.b * coefficients.b - 4 * coefficients.a * coefficients.c),
+    );
   }
 
   private placeholder() {
