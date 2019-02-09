@@ -12,7 +12,7 @@ export class AppRoot {
           <ion-route url="/" component="app-home" />
           <ion-route url="/playground" component="app-playground" />
           <ion-route
-            url="/playground/app-polynomial-sphere"
+            url="/playground/polynomial-sphere"
             component="app-polynomial-sphere"
           />
           <ion-route url="/about" component="app-about" />
