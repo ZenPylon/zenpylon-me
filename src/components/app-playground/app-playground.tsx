@@ -21,9 +21,17 @@ export class AppPlayground {
           <section>
             <ion-row>
               <ion-col>
-                <ion-button fill="clear" href="/playground/polynomial-sphere">
+                <ion-button
+                  no-padding
+                  fill="clear"
+                  href="/playground/polynomial-sphere"
+                >
                   Polynomial Sphere
                 </ion-button>
+                <p>
+                  A whimsical exploration of quadratic roots, color, and the
+                  surface of a sphere.
+                </p>
               </ion-col>
             </ion-row>
             <ion-row>
