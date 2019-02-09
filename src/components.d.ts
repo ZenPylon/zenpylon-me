@@ -25,6 +25,9 @@ export namespace Components {
   interface AppPlayground {}
   interface AppPlaygroundAttributes extends StencilHTMLAttributes {}
 
+  interface PolynomialSphere {}
+  interface PolynomialSphereAttributes extends StencilHTMLAttributes {}
+
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 }
@@ -35,6 +38,7 @@ declare global {
     'AppHeader': Components.AppHeader;
     'AppHome': Components.AppHome;
     'AppPlayground': Components.AppPlayground;
+    'PolynomialSphere': Components.PolynomialSphere;
     'AppRoot': Components.AppRoot;
   }
 
@@ -43,6 +47,7 @@ declare global {
     'app-header': Components.AppHeaderAttributes;
     'app-home': Components.AppHomeAttributes;
     'app-playground': Components.AppPlaygroundAttributes;
+    'polynomial-sphere': Components.PolynomialSphereAttributes;
     'app-root': Components.AppRootAttributes;
   }
 
@@ -71,6 +76,12 @@ declare global {
     new (): HTMLAppPlaygroundElement;
   };
 
+  interface HTMLPolynomialSphereElement extends Components.PolynomialSphere, HTMLStencilElement {}
+  var HTMLPolynomialSphereElement: {
+    prototype: HTMLPolynomialSphereElement;
+    new (): HTMLPolynomialSphereElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
@@ -82,6 +93,7 @@ declare global {
     'app-header': HTMLAppHeaderElement
     'app-home': HTMLAppHomeElement
     'app-playground': HTMLAppPlaygroundElement
+    'polynomial-sphere': HTMLPolynomialSphereElement
     'app-root': HTMLAppRootElement
   }
 
@@ -90,6 +102,7 @@ declare global {
     'app-header': HTMLAppHeaderElement;
     'app-home': HTMLAppHomeElement;
     'app-playground': HTMLAppPlaygroundElement;
+    'polynomial-sphere': HTMLPolynomialSphereElement;
     'app-root': HTMLAppRootElement;
   }
 
