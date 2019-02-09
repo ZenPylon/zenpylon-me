@@ -17,8 +17,7 @@
   "dependencies": {
     "@ionic/core": "4.0.0",
     "@types/three": "^0.93.19",
-    "three": "^0.101.1",
-    "three-lut": "^79.0.1"
+    "three": "^0.101.1"
   },
   "devDependencies": {
     "@stencil/core": "0.17.0",
