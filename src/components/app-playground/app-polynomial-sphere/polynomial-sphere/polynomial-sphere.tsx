@@ -24,10 +24,7 @@ export class PolynomialSphere {
   }
 
   private createSphere() {
-    if (this.mesh) {
-      return;
-    }
-
+    this.scene.remove(this.mesh);
     const icoSphere = PolynomialSphereUtil.createColoredIcoSphere(
       this.radius,
       4,
