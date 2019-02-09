@@ -39,7 +39,9 @@ export class AppPolynomialSphere {
               </section>
             </ion-col>
             <ion-col text-center size-md="6" size-lg="5" size-xs="10">
-              <section />
+              <section>
+                <polynomial-sphere />
+              </section>
             </ion-col>
           </ion-row>
           <section />
