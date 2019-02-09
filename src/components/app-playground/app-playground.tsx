@@ -21,6 +21,11 @@ export class AppPlayground {
           <section>
             <ion-row>
               <ion-col>
+                <a href="/playground/polynomial-sphere">Polynomial Sphere</a>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
                 <p>Are you content without content?</p>
               </ion-col>
             </ion-row>
