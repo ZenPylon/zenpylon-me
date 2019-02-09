@@ -12,6 +12,8 @@ interface QuadraticCoefficients {
 };
 
 export class PolynomialSphereUtil {
+  private static faceIndices = ['a', 'b', 'c'];
+
   public static createIcoSphere(
     radius: number,
     detail: number,
@@ -22,39 +24,41 @@ export class PolynomialSphereUtil {
     const extrema = this.getSphereExtrema(icoSphere);
     const faceIndices = ['a', 'b', 'c'];
     const colorMap = new Lut(colorMapName, colorMapResolution);
+    let faces;
+
     colorMap.setMax(extrema.max);
     colorMap.setMin(extrema.min);
 
     for (let i = 0; i < icoSphere.faces.length; i++) {
-      const f = icoSphere.faces[i];
+      faces = icoSphere.faces[i];
 
       for (let j = 0; j < 3; j++) {
-        const vertexIndex = f[faceIndices[j]];
-        const coefficients = this.coefficientsFromVertex(icoSphere.vertices[vertexIndex]);
-        const discriminant = Math.sqrt(
-          Math.abs(coefficients.b * coefficients.b - 4 * coefficients.a * coefficients.c),
-        );
-        f.vertexColors[j] = colorMap.getColor(discriminant);
+        const vertexIndex = faces[faceIndices[j]];
+        const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
+        const discriminant = this.getDiscriminantMagnitude(coefficients);
+        faces.vertexColors[j] = colorMap.getColor(discriminant);
       }
     }
   }
 
+  /**
+   * Calculates the max and min of the discriminant for each vertex --> coefficients map
+   * @param icoSphere The sphere to calculate the min and max
+   */
   private static getSphereExtrema(
     icoSphere: IcosahedronGeometry,
   ): DiscriminantExtrema {
-    // Go through and find the min / max values of the discriminant
-    const faceIndices = ['a', 'b', 'c'];
     const extrema: DiscriminantExtrema = {
       min: null,
       max: null,
     };
-    let vertexIndex, f, p;
+    let vertexIndex;
 
     for (let i = 0; i < icoSphere.faces.length; i++) {
-      f = icoSphere.faces[i];
+      const face = icoSphere.faces[i];
 
-      for (let j = 0; j < faceIndices.length; j++) {
-        vertexIndex = f[faceIndices[j]];
+      for (let j = 0; j < this.faceIndices.length; j++) {
+        vertexIndex = face[this.faceIndices[j]];
         const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
         const discriminant = this.getDiscriminantMagnitude(coefficients);
 
