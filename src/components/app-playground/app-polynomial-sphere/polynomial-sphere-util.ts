@@ -1,4 +1,5 @@
 import { IcosahedronGeometry } from 'three';
+import { Lut } from 'three-lut';
 
 interface DiscriminantExtrema {
   min: number;
@@ -9,7 +10,7 @@ interface QuadraticCoefficients {
   a: number;
   b: number;
   c: number;
-};
+}
 
 export class PolynomialSphereUtil {
   private static faceIndices = ['a', 'b', 'c'];
@@ -33,7 +34,9 @@ export class PolynomialSphereUtil {
 
       for (let j = 0; j < this.faceIndices.length; j++) {
         const vertexIndex = faces[this.faceIndices[j]];
-        const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
+        const coefficients = this.getCoefficientsFromVertex(
+          icoSphere.vertices[vertexIndex],
+        );
         const discriminant = this.getDiscriminantMagnitude(coefficients);
         faces.vertexColors[j] = colorMap.getColor(discriminant);
       }
@@ -58,7 +61,9 @@ export class PolynomialSphereUtil {
 
       for (let j = 0; j < this.faceIndices.length; j++) {
         vertexIndex = face[this.faceIndices[j]];
-        const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
+        const coefficients = this.getCoefficientsFromVertex(
+          icoSphere.vertices[vertexIndex],
+        );
         const discriminant = this.getDiscriminantMagnitude(coefficients);
 
         if (discriminant > extrema.max || extrema.max === null) {
@@ -85,27 +90,13 @@ export class PolynomialSphereUtil {
    * Returns the magnitude of the discriminant (i.e. the absolute value)
    * @param coefficients The coefficients that determint the quadratic equation.
    */
-  private static getDiscriminantMagnitude(coefficients: QuadraticCoefficients): number {
+  private static getDiscriminantMagnitude(
+    coefficients: QuadraticCoefficients,
+  ): number {
     return Math.sqrt(
-      Math.abs(coefficients.b * coefficients.b - 4 * coefficients.a * coefficients.c),
+      Math.abs(
+        coefficients.b * coefficients.b - 4 * coefficients.a * coefficients.c,
+      ),
     );
   }
-
-  private placeholder() {
-    const material = new THREE.MeshPhongMaterial({
-      color: 0xffffff,
-      flatShading: true,
-      vertexColors: THREE.VertexColors,
-      shininess: 0,
-    });
-    const wireframeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x000000,
-      wireframe: true,
-      transparent: true,
-    });
-    const mesh = new THREE.Mesh(this.icosphere, material);
-    mesh.position.x = 0;
-    this.scene.add(mesh);
-  }
-
-  
+}
