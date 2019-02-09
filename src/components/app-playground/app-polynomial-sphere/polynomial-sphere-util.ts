@@ -22,7 +22,6 @@ export class PolynomialSphereUtil {
   ) {
     const icoSphere = new IcosahedronGeometry(radius, detail);
     const extrema = this.getSphereExtrema(icoSphere);
-    const faceIndices = ['a', 'b', 'c'];
     const colorMap = new Lut(colorMapName, colorMapResolution);
     let faces;
 
@@ -32,8 +31,8 @@ export class PolynomialSphereUtil {
     for (let i = 0; i < icoSphere.faces.length; i++) {
       faces = icoSphere.faces[i];
 
-      for (let j = 0; j < 3; j++) {
-        const vertexIndex = faces[faceIndices[j]];
+      for (let j = 0; j < this.faceIndices.length; j++) {
+        const vertexIndex = faces[this.faceIndices[j]];
         const coefficients = this.getCoefficientsFromVertex(icoSphere.vertices[vertexIndex]);
         const discriminant = this.getDiscriminantMagnitude(coefficients);
         faces.vertexColors[j] = colorMap.getColor(discriminant);
