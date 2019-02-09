@@ -9,7 +9,7 @@ export class PolynomialSphere {
     return [
       <app-header />,
       <ion-content>
-        <ion-grid>
+        <ion-grid padding>
           <header>
             <ion-row text-center justify-content-center align-items-center>
               <ion-col class="header-2">Polynomial Sphere</ion-col>
@@ -17,11 +17,10 @@ export class PolynomialSphere {
           </header>
           <ion-row
             class="content-row"
-            text-center
             justify-content-center
             align-items-center
           >
-            <ion-col>
+            <ion-col size-md="6" size-lg="5" size-xs="10">
               <section>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -39,7 +38,7 @@ export class PolynomialSphere {
                 </p>
               </section>
             </ion-col>
-            <ion-col>
+            <ion-col text-center size-md="6" size-lg="5" size-xs="10">
               <section>
                 <p>Canvas</p>
               </section>
