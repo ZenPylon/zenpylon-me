@@ -1,4 +1,4 @@
-import { IcosahedronGeometry } from 'three';
+import { IcosahedronGeometry, LoaderUtils } from 'three';
 import { Lut } from 'three-lut';
 
 interface DiscriminantExtrema {
@@ -12,6 +12,11 @@ interface QuadraticCoefficients {
   c: number;
 }
 
+interface ColorMapSphere {
+  colorMap: LoaderUtils;
+  sphere: IcosahedronGeometry;
+}
+
 export class PolynomialSphereUtil {
   private static faceIndices = ['a', 'b', 'c'];
 
@@ -23,32 +28,38 @@ export class PolynomialSphereUtil {
    * @param colorMapName The color map name, e.g. 'rainbow'.
    * @param colorMapResolution The resolution of the color map.
    */
-  public static createPolynomialIcoSphere(
+  public static createColoredIcoSphere(
     radius: number,
     detail: number,
     colorMapName: string,
     colorMapResolution: number,
-  ) {
-    const icoSphere = new IcosahedronGeometry(radius, detail);
-    const extrema = this.getSphereExtrema(icoSphere);
-    const colorMap = new Lut(colorMapName, colorMapResolution);
+  ): ColorMapSphere {
+    const coloredIcoSphere = {
+      sphere: new IcosahedronGeometry(radius, detail),
+      colorMap: new Lut(colorMapName, colorMapResolution),
+    };
+    const extrema = this.getSphereExtrema(coloredIcoSphere.sphere);
+
     let faces;
 
-    colorMap.setMax(extrema.max);
-    colorMap.setMin(extrema.min);
+    coloredIcoSphere.colorMap.setMax(extrema.max);
+    coloredIcoSphere.colorMap.setMin(extrema.min);
 
-    for (let i = 0; i < icoSphere.faces.length; i++) {
-      faces = icoSphere.faces[i];
+    for (let i = 0; i < coloredIcoSphere.sphere.faces.length; i++) {
+      faces = coloredIcoSphere.sphere.faces[i];
 
       for (let j = 0; j < this.faceIndices.length; j++) {
         const vertexIndex = faces[this.faceIndices[j]];
         const coefficients = this.getCoefficientsFromVertex(
-          icoSphere.vertices[vertexIndex],
+          coloredIcoSphere.sphere.vertices[vertexIndex],
         );
         const discriminant = this.getDiscriminantMagnitude(coefficients);
-        faces.vertexColors[j] = colorMap.getColor(discriminant);
+        faces.vertexColors[j] = coloredIcoSphere.colorMap.getColor(
+          discriminant,
+        );
       }
     }
+    return coloredIcoSphere;
   }
 
   /**
