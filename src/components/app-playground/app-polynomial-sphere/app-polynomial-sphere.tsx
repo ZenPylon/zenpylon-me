@@ -4,7 +4,7 @@ import { Component } from '@stencil/core';
   tag: 'app-polynomial-sphere',
   styleUrl: 'app-polynomial-sphere.scss',
 })
-export class PolynomialSphere {
+export class AppPolynomialSphere {
   render() {
     return [
       <app-header />,
