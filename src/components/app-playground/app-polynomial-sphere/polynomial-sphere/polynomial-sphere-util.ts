@@ -1,5 +1,6 @@
 import { IcosahedronGeometry, LoaderUtils } from 'three';
-import { Lut } from 'three-lut';
+import * as THREE from 'three';
+require('three-lut');
 
 interface DiscriminantExtrema {
   min: number;
@@ -36,7 +37,7 @@ export class PolynomialSphereUtil {
   ): ColorMapSphere {
     const coloredIcoSphere = {
       sphere: new IcosahedronGeometry(radius, detail),
-      colorMap: new Lut(colorMapName, colorMapResolution),
+      colorMap: new (THREE as any).Lut(colorMapName, colorMapResolution)(),
     };
     const extrema = this.getSphereExtrema(coloredIcoSphere.sphere);
 
