@@ -29,8 +29,8 @@ export class AppPlayground {
                   Polynomial Sphere
                 </ion-button>
                 <p>
-                  A whimsical exploration of quadratic roots, color, and the
-                  surface of a sphere.
+                  A whimsical exploration of quadratic roots, color maps, and
+                  the surface of a sphere.
                 </p>
               </ion-col>
             </ion-row>
