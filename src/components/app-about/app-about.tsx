@@ -24,10 +24,10 @@ export class AppAbout {
                 I’m a software engineer at <a href="//getwellio.com"> Wellio</a>
                 . I do full-stack mobile and web development using tools like
                 Ionic, Angular, Firestore, and Flask. Outside of work, I enjoy
-                math, music, and meditation. Much of my perspective is informed
-                by my experience with Bipolar II. I aspire to be grounded,
-                compassionate, and perceptive.
+                math, music, and meditation.
               </p>
+
+              <p>I aspire to be grounded, compassionate, and perceptive. </p>
             </ion-col>
           </ion-row>
         </ion-grid>
