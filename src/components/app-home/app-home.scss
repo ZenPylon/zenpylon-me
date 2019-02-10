@@ -1,7 +1,4 @@
 app-home {
-  ion-grid {
-    height: 100%;
-  }
   .header-row {
     height: 20%;
   }
@@ -26,7 +23,7 @@ app-home {
   .social-media-row {
     height: 5%;
     ion-col a {
-      color: teal;
+      color: var(--ion-color-primary);
       font-size: 1rem;
       font-weight: 300;
       letter-spacing: 0.1rem;
