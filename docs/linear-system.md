@@ -44,21 +44,22 @@ Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from 
 Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
 
 $$k=1$$
-$$\large z_0+\frac{1}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{1}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{1}{5}u_1))$$.
+$$\large z_0+\frac{1}{5}u_2 = S_1(\frac{1}{5})\cos(x_0+\frac{1}{5}u_1)+S_2(\frac{1}{5})\cos(2(x_0+\frac{1}{5}u_1))+\ldots+S_n(\frac{1}{5})\cos(n(x_0+\frac{1}{5}u_1))$$.
 
 $$k=2$$
-$$\large z_0+\frac{2}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{2}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{2}{5}u_1))$$
+$$\large z_0+\frac{2}{5}u_2 = S_1(\frac{2}{5})\cos(x_0+\frac{2}{5}u_1)+S_2(\frac{2}{5})\cos(2(x_0+\frac{2}{5}u_1))+\ldots+S_n(\frac{2}{5})\cos(n(x_0+\frac{2}{5}u_1))$$
 
 $$k=3$$   
-$$\large z_0+\frac{3}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{3}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{3}{5}u_1))$$3
+$$\large z_0+\frac{3}{5}u_2 = S_1(\frac{3}{5}u)\cos(x_0+\frac{3}{5}u_1)+S_2(\frac{3}{5})\cos(2(x_0+\frac{3}{5}u_1))+\ldots+S_n(\frac{3}{5})\cos(n(x_0+\frac{3}{5}u_1))$$3
 
 $$ k=4$$
-$$\large z_0+\frac{4}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{4}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{4}{5}u_1))$$.
+$$\large z_0+\frac{4}{5}u_2 = S_1(\frac{4}{5})\cos(x_0+\frac{4}{5}u_1)+S_2(\frac{4}{5})\cos(2(x_0+\frac{4}{5}u_1))+\ldots+S_n(\frac{4}{5})\cos(n(x_0+\frac{4}{5}u_1))$$.
 
 $$ k=5$$
-$$\large z_0+u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+u_1))+\ldots+S_n(t)\cos(n(x_0+u_1))$$.
+$$\large z_0+u_2 = S_1(1)\cos(x_0+u_1)+S_2(1)\cos(2(x_0+u_1))+\ldots+S_n(1)\cos(n(x_0+u_1))$$.
 
 
+Wow, what a mess.
 
 
 
