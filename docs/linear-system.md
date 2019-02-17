@@ -54,17 +54,18 @@ where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,
 
 We want to choose a set of $r_i$'s such that we minimize $u2$.  Suppose we plug in $n$ values of $t$. 
 
-$t=\frac{1}{n}$
+$\large t=\frac{1}{n}$
 
 $$\large z_0+\frac{1}{n}u_2=F(x, \frac{1}{n})$$.
-$t=\frac{2}{n}$
+$\large t=\frac{2}{n}$
 
 $$\large z_0+\frac{2}{n}u_2=F(x, \frac{2}{n})$$.
-$$\cdots$$
+$$\vdots$$
 
 $\large t=1$
 
 $$\large z_0+u_2=F(x, 1)$$.
+
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
