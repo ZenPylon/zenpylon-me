@@ -15,8 +15,10 @@ This equation can be made more explicit by writing out the component equations i
 $$\LARGE x_0+tu_1=x$$
 $$\LARGE F(x_0, 0)+tu_2=F(x, t)$$
 
-To simplify the notation slightly, let $\large z_0=F(x_0, 0)$, so that we have
+To simplify the notation slightly, let $\ z_0=F(x_0, 0)$, so that we have
 
 $$\LARGE z_0+tu_2=F(x, t)$$.
 
+Expanding $F(x, t)$, we have
 
+$$\large z_0 + tu_2=S_1(t)\cos(x)+S_2(t)\cos(2x)+\ldots+S_n(t)\cos(nx)$$
