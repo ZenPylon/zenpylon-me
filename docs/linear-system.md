@@ -41,6 +41,26 @@ The first thing to note from our equation involving $u_1$ and $u_2$ is that we h
 
 Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$ from which we will then calculate $u_1$. 
 
+### Approach: t-increments
+Suppose that we follow our trace line in small increments of $t$, with each segment $j$ starting at $\large \frac{j}{m}$ and having length $\large \frac{1}{m}$.  
+
+### Approach: t-increments with piecewise-linear scale functions
+Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
+
+$$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
+$$\large S_i(t) = c_{i,1}, t \geq \frac{1}{r_i}$$
+
+where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off (i.e. flattens) to the value $c_{i,1}$ for the remainder of interval (i.e. remainder of $[0, 1]$).  
+
+Now, we want to choose a set of $r_i$'s such that we minimize $u2$.
+
+$$\large z_0+tu_2=F(x, t)$$.
+
+If we plug in values of $t$
+
+$$\large z_0 + tu_2=S_1(t)\cos(x_0+tu_1)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
+
+One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes.
 
 ### Approach: Sum of cosines formula
 Apply the sum of cosines formula.
@@ -55,17 +75,6 @@ With separated cosines and sines:
 
 $$\large x_0 + tu_2 = \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)] - \sum_{k=1}^{n} S_k(t)[ \sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
 
-
-### Approach: t-increments
-Suppose that we follow our trace line in small increments of $t$, with each segment $j$ starting at $\large \frac{j}{m}$ and having length $\large \frac{1}{m}$.  
-
-### Approach: t-increments with piecewise-linear scale functions
-Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
-
-$$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
-$$\large S_i(t) = c_{i,1}, t \geq \frac{1}{r_i}$$
-
-where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off for the remainder of interval (i.e. remainder of $[0, 1]$).  
 
 ### Approach: linear combination of sinusoids
 Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids).
