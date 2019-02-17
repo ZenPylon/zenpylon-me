@@ -43,14 +43,15 @@ Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from 
 
 $$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
 
-If we apply the sum of cosines formula, we may then be able to modify Lagrange's trigonometric identities (we need to check if it can be modified to encompass amplitudes not equal to 1).
-
-(Also, in this case, $S_i(t)$ isn't necessary, since all coefficients will equal the target coefficient).
+Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.
 
 
 
+**Possibility**
+If we apply the sum of cosines formula, we may be able to collect similar terms.
 
-**Another possibility:**
+
+**Possibility:**
 If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
 
 
