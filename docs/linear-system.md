@@ -22,3 +22,7 @@ $$\LARGE z_0+tu_2=F(x, t)$$.
 Expanding $F(x, t)$, we have
 
 $$\large z_0 + tu_2=S_1(t)\cos(x)+S_2(t)\cos(2x)+\ldots+S_n(t)\cos(nx)$$
+
+We can then substitute $x_0+tu_1$ for $x$:
+
+$$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$
