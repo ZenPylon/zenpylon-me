@@ -52,15 +52,21 @@ $$\large S_i(t) = c_{i,1}, t \geq \frac{1}{r_i}$$
 
 where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off (i.e. flattens) to the value $c_{i,1}$ for the remainder of interval (i.e. remainder of $[0, 1]$).  
 
-Now, we want to choose a set of $r_i$'s such that we minimize $u2$.
+We want to choose a set of $r_i$'s such that we minimize $u2$.  Suppose we plug in $n$ values of $t$. 
 
-$$\large z_0+tu_2=F(x, t)$$.
+$t=\frac{1}{n}$
 
-If we plug in values of $t$
+$$\large z_0+\frac{1}{n}u_2=F(x, \frac{1}{n})$$.
+$t=\frac{2}{n}$
 
-$$\large z_0 + tu_2=S_1(t)\cos(x_0+tu_1)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
+$$\large z_0+\frac{2}{n}u_2=F(x, \frac{2}{n})$$.
+$$\cdots$$
 
-One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes.
+$\large t=1$
+
+$$\large z_0+u_2=F(x, 1)$$.
+
+One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
 ### Approach: Sum of cosines formula
 Apply the sum of cosines formula.
