@@ -14,12 +14,12 @@ Where $\vec{u}$ is the direction of the line, and $t\in[0, 1]$.  The intercept o
 
 This equation can be made more explicit by writing out the component equations into parts (one for the x value and one for the image of the x value).  
 
-$$\LARGE x_0+tu_1=x$$
-$$\LARGE F(x_0, 0)+tu_2=F(x, t)$$
+$$\large x_0+tu_1=x$$
+$$\large F(x_0, 0)+tu_2=F(x, t)$$
 
 To simplify the notation slightly, let $\ z_0=F(x_0, 0)$, so that we have
 
-$$\LARGE z_0+tu_2=F(x, t)$$.
+$$\large z_0+tu_2=F(x, t)$$.
 
 Expanding $F(x, t)$, we have
 
@@ -32,6 +32,18 @@ $$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(
 The idea here is to constrain our morphing function so that it has at least one point on the line specified by $\vec{u}$ as $t:0\rightarrow1$.  In this way, we trace the morphing process from the original minimum point.
 
 But this is just specifies a general line. We need to add an addtitional constraint so that the line moves in the direction of the target minimum. Since we constructed the template function to have a minimum lower than the target's minimum, the shortest vertical distance from the template's minimum to the target function will occur at the target function's minimum.  The "vertical distance" equates to $u_2$.
+
+## Minimizing $u_2$
+
+**Note:** Still figuring this out.
+
+The first thing to note from our equation involving $u_1$ and $u_2$ is that we have many degrees of freedom - our scaling functions, $S_i(t)$, $u_1$ and $u_2$, and the morphing parameter that $t$ takes on a range of values in range $[0, 1]$.
+
+Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$.
+
+
+
+
 
 
   
