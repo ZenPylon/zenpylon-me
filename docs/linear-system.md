@@ -39,11 +39,28 @@ But this is just specifies a general line. We need to add an addtitional constra
 
 The first thing to note from our equation involving $u_1$ and $u_2$ is that we have many degrees of freedom - our scaling functions, $S_i(t)$, $u_1$ and $u_2$, and the morphing parameter that $t$ takes on a range of values in range $[0, 1]$.
 
-Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$.  If we plug in $t=1$, we get:
+Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$. 
 
-$$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
+Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
 
-Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.
+$$k=1$$
+$$\large z_0+\frac{1}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{1}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{1}{5}u_1))$$.
+
+$$k=2$$
+$$\large z_0+\frac{2}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{2}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{2}{5}u_1))$$
+
+$$k=3$$   
+$$\large z_0+\frac{3}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{3}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{3}{5}u_1))$$3
+
+$$ k=4$$
+$$\large z_0+\frac{4}{5}u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+\frac{4}{5}u_1))+\ldots+S_n(t)\cos(n(x_0+\frac{4}{5}u_1))$$.
+
+$$ k=5$$
+$$\large z_0+u_2 = S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+u_1))+\ldots+S_n(t)\cos(n(x_0+u_1))$$.
+
+
+
+
 
 
 
