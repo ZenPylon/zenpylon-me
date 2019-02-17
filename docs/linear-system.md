@@ -42,19 +42,18 @@ The first thing to note from our equation involving $u_1$ and $u_2$ is that we h
 Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$. 
 
 
+### Approach: Sum of cosines formula
+Apply the sum of cosines formula.
 
 
-**Possibility**
-If we apply the sum of cosines formula, we may be able to collect similar terms via the [https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids]
+### Approach: linear combination of sinusoids
+Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids)
 
-
-
-**Possibility:**
+### Approach: t-increments
 If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
 
 
-
-**Possibility**
+### Approach: evaluate at t-increments, create system of equations
 Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
 
 $$k=1$$
