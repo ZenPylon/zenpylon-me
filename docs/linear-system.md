@@ -59,7 +59,8 @@ $$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1]) - \sum_{k=1
 Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids)
 
 ### Approach: t-increments
-If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
+Suppose that we follow our trace line in small increments of $t$, with each segment $k$ starting at $\large \frac{k}{n}$ and having length $\large \frac{1}{n}$.
+
 
 
 ### Approach: evaluate at t-increments, create system of equations
