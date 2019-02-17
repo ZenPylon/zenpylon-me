@@ -5,10 +5,18 @@ We can begin my writing the general form of the lineIf F is our morphing functio
 
 $$
 \LARGE
-z_0 + t\vec{u}=(x, F(x, t))
+(x_0, + F(x_0, 0))+ t\vec{u}=(x, F(x, t))
 $$
 
-Where $\vec{u}$ is the direction of the line, and $t\in[0, 1]$.  The intercept of the line, $\large z_0$, and can be written as 
+Where $\vec{u}$ is the direction of the line, and $t\in[0, 1]$.  The intercept of the line is represented by the leftmost term, $\large (x_0, + F(x_0, 0))$.
 
-$$\LARGE z_0=(x_0, + F(x_0, 0))$$.
+This equation can be made more explicit by writing out the component equations into parts (one for the x value and one for the image of the x value).  
+
+$$\LARGE x_0+tu_1=x$$
+$$\LARGE F(x_0, 0)+tu_2=F(x, t)$$
+
+To simplify the notation slightly, let $\large z_0=F(x_0, 0)$, so that we have
+
+$$\LARGE z_0+tu_2=F(x, t)$$.
+
 
