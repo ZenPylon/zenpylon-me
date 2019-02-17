@@ -49,19 +49,18 @@ $$\large z_0 + tu_2 = S_1(t)[\cos(x_0)\cos(tu_1) - \sin(x_0)\sin(tu_1)]+\ldots +
 
 More compactly:
 
-$$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)-\sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
+$$\large x_0 + tu_2 = \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)-\sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
 
 With separated cosines and sines:
 
-$$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1]) - \sum_{k=1}^{n} S_k(t)[ \sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
+$$\large x_0 + tu_2 = \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)] - \sum_{k=1}^{n} S_k(t)[ \sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
+
 
 ### Approach: linear combination of sinusoids
-Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids)
+Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids).
 
 ### Approach: t-increments
-Suppose that we follow our trace line in small increments of $t$, with each segment $k$ starting at $\large \frac{k}{n}$ and having length $\large \frac{1}{n}$.
-
-
+Suppose that we follow our trace line in small increments of $t$, with each segment $j$ starting at $\large \frac{j}{m}$ and having length $\large \frac{1}{m}$.
 
 ### Approach: evaluate at t-increments, create system of equations
 Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
