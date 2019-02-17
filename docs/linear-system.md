@@ -39,12 +39,17 @@ But this is just specifies a general line. We need to add an addtitional constra
 
 The first thing to note from our equation involving $u_1$ and $u_2$ is that we have many degrees of freedom - our scaling functions, $S_i(t)$, $u_1$ and $u_2$, and the morphing parameter that $t$ takes on a range of values in range $[0, 1]$.
 
-Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$. 
+Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$ from which we will then calculate $u_1$. 
 
 
 ### Approach: Sum of cosines formula
 Apply the sum of cosines formula.
 
+$$\large z_0 + tu_2 = S_1(t)[\cos(x_0)\cos(tu_1) - \sin(x_0)\sin(tu_1)]+\ldots + S_n(t)[ \cos(n \cdot x_0)\cos(n \cdot tu_1)-\sin(n \cdot x_0)\sin(n \cdot tu_1)]$$.
+
+More compactly:
+
+$$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)-\sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
 
 ### Approach: linear combination of sinusoids
 Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids)
