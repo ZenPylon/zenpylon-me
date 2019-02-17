@@ -51,6 +51,10 @@ More compactly:
 
 $$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)-\sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
 
+With separated cosines and sines:
+
+$$\large \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1]) - \sum_{k=1}^{n} S_k(t)[ \sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
+
 ### Approach: linear combination of sinusoids
 Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids)
 
