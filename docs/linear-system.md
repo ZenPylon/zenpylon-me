@@ -27,7 +27,7 @@ $$\large z_0 + tu_2=S_1(t)\cos(x)+S_2(t)\cos(2x)+\ldots+S_n(t)\cos(nx)$$
 
 We can then substitute $x_0+tu_1$ for $x$:
 
-$$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
+$$\large z_0 + tu_2=S_1(t)\cos(x_0+tu_1)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
 
 The idea here is to constrain our morphing function so that it has at least one point on the line specified by $\vec{u}$ as $t:0\rightarrow1$.  In this way, we trace the morphing process from the original minimum point.
 
@@ -41,6 +41,20 @@ The first thing to note from our equation involving $u_1$ and $u_2$ is that we h
 
 Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$. 
 
+
+
+
+**Possibility**
+If we apply the sum of cosines formula, we may be able to collect similar terms via the [https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids]
+
+
+
+**Possibility:**
+If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
+
+
+
+**Possibility**
 Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
 
 $$k=1$$
@@ -60,18 +74,6 @@ $$\large z_0+u_2 = S_1(1)\cos(x_0+u_1)+S_2(1)\cos(2(x_0+u_1))+\ldots+S_n(1)\cos(
 
 
 Wow, what a mess.
-
-
-
-
-
-**Possibility**
-If we apply the sum of cosines formula, we may be able to collect similar terms.
-
-
-**Possibility:**
-If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
-
 
 
 
