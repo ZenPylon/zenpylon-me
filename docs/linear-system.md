@@ -39,7 +39,22 @@ But this is just specifies a general line. We need to add an addtitional constra
 
 The first thing to note from our equation involving $u_1$ and $u_2$ is that we have many degrees of freedom - our scaling functions, $S_i(t)$, $u_1$ and $u_2$, and the morphing parameter that $t$ takes on a range of values in range $[0, 1]$.
 
-Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$.
+Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$, from which we will then calculate $u_1$.  If we plug in $t=1$, we get:
+
+$$\large z_0 + tu_2=S_1(x_0)\cos(x_0)+S_2(t)\cos(2(x_0+tu_1))+\ldots+S_n(t)\cos(n(x_0+tu_1))$$.
+
+If we apply the sum of cosines formula, we may then be able to modify Lagrange's trigonometric identities (we need to check if it can be modified to encompass amplitudes not equal to 1).
+
+(Also, in this case, $S_i(t)$ isn't necessary, since all coefficients will equal the target coefficient).
+
+
+
+
+**Another possibility:**
+If we think of moving t in small increments, if we minimize $u_2$ at each one, the total increase of $u_2$ should in turn be minimized.  This might create a system of equations
+
+
+
 
 
 
