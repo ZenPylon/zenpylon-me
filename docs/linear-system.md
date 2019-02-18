@@ -81,8 +81,17 @@ $$\large u_2 = \frac{2}{(n + 1)} \cdot (\frac{1}{n}[...] - x_0)$$
 
 Since $x_0$, $\frac{2}{(n + 1)}$, and $\frac{1}{n}$ are given, let's drop them for convenience of notation (though we'll need to add them back later).  With that, we can remove everything except our placeholder $[...]$, and expand the placeholder as follows:
 
-$$\large u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{1}{n}u_1))} + \cdots + \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{n}{n}u_1))}$$
+$$\large u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{1}{n}u_1))} + \cdots + \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{n}{n}u_1))}$$.
 
+So, how can we choose $r_i$ such that $u_2$ is minimized?  $u_2$ still exists as a sum.  If we can minimize each term in that sum, $u_2$ should also be minimized in the process.  Note that our scaling functions (i.e. our piecewise-linear functions) are invoked multiple times, one at each value of $t$.  Note, also, that at a certain value of $t$, the value of that function will flatten to a constant. In terms of the equation, that means that at a certain value of $t$, all terms to the right involving $S_i(t)$ have the same value.
+
+We need to consider two cases: the case of decreasing scaling functions in which the template coefficient is larger than the target coefficient), and the case of increasing scale functions (in which the target coefficient is larger than the template coefficient).  Since we control the coefficients $r_i$ of the scaling functions, we want to choose $r_i$ such that large values decrease quickly and small values decrease slowly.  Likewise, we want small values to increase quickly, and large values to increase slowly.
+
+NOTE: correct the above to mention that "value" is the change in coefficients, not the coefficient value itself.
+
+However, we also need to take into account the value of the cosine term itself as $t$ goes from 0 to 1.
+
+----
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
