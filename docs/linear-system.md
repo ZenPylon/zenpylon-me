@@ -116,7 +116,7 @@ However, we also need to take into account the value of the cosine term itself a
     
 Let 
 
-$$\large w_i=(\frac{1}{n}[c_{2,1} - c_{2,0}] + \cdots + \frac{n}{n}[c_{2,1} - c_{2,0}] + \cos(2(x_0 + \frac{1}{n}u_1)) + \cdots + \cos(2(x_0 + \frac{n}{n}u_1)))$$
+$$\large w_i = \frac{1}{n}[c_{2,1} - c_{2,0}] + \cdots + \frac{n}{n}[c_{2,1} - c_{2,0}] + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1) - sin(i \cdot x_0)]$$
 
 Then we have 
 
