@@ -97,7 +97,13 @@ However, we also need to take into account the value of the cosine term itself a
 1. Separate into increasing and decreasing terms.
 1. Collect all the terms involving $r_i$ for each $i$.  e.g. $[n \cdot c_{2,0} + r_2(\frac{1}{n}[c_{2,1} - c_{2,0}] + \cdots + \frac{n}{n}[c_{2,1} - c_{2,0}] + \cos(2(x_0 + \frac{1}{n}u_1)) + \cdots \cos(2(x_0 + \frac{n}{n}u_1)))]$, where each term in brackets has a factor of $t$ (for that particular equation).
 1. (Pull out and ignore the constant terms $n \cdot c_{2,0}$ ?)
-1. Figure out how to handle the $u_1$ term in the cosine functions.  How to evaluate function at each point, or across range 0-->1?  Sum of sines formula may be useful here, actually, to get into standard form.
+1. Figure out how to handle the $u_1$ term in the cosine functions.  How to evaluate function at each point, or across range 0-->1?
+
+    **Proposal:** 
+    1. For large $n$, we an approximate the cosine sum with the integral on the interval $[0, 1]$.  (The increasing value of $t$ betwen $\frac{1}{n} \cdots \frac{n}{n}$ acts as our continuous variable for large $n$).
+    1. Evaluate integral: (TODO, notate) integral.  = $\large \frac{1}{2u_1}[sin(2x_0 + 2u_1) - sin(2x_0)]$
+
+1. 
 1. Sort terms from highest to lowest (absolute value?)
 1. Set rate in accordance 
 
