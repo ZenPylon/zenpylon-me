@@ -134,7 +134,7 @@ The above technique feels promising, but it's hard to track what we're solving f
 
 $$\large u_2 = \sum_{i=1}^n c_i + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1)) - sin(i \cdot x_0)]$$
 
-Where $c_i$ represents the evaluation of the non-trigonometric terms.  The remaining sine terms with $u_1$ are still troublesome. Could potentially combine with the original equations where we plug in values for r$t$, and substitute $u_2$.
+Where $c_i$ represents the evaluation of the non-trigonometric terms.  The remaining sine terms with $u_1$ are still troublesome. Could potentially combine with the original equations where we plug in values for $t$, and substitute $u_2$.  The motivation here is that the argument to the sines and cosines is the same.
 
 **NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $u_1$ indefinitely to trace it), with $t = 1$.
 
