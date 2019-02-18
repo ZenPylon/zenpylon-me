@@ -44,7 +44,7 @@ Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$ from w
 ## Approach: t-increments
 Suppose that we follow our trace line in small increments of $t$, with each segment $j$ starting at $\large \frac{j}{m}$ and having length $\large \frac{1}{m}$.  
 
-###Approach: t-increments with piecewise-linear scale functions
+## Approach: t-increments with piecewise-linear scale functions
 Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
 
 $$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
