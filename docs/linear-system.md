@@ -85,7 +85,7 @@ $$\large u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_
 
 So, how can we choose $r_i$ such that $u_2$ is minimized?  $u_2$ still exists as a sum.  If we can minimize each term in that sum, $u_2$ should also be minimized in the process.  Note that our scaling functions (i.e. our piecewise-linear functions) are invoked multiple times, one at each value of $t$.  Note, also, that at a certain value of $t$, the value of that function will flatten to a constant. In terms of the equation, that means that at a certain value of $t$, all terms to the right involving $S_i(t)$ have the same value.
 
-We need to consider two cases: the case of decreasing scaling functions in which the template coefficient is larger than the target coefficient), and the case of increasing scale functions (in which the target coefficient is larger than the template coefficient).  Since we control the coefficients $r_i$ of the scaling functions, we want to choose $r_i$ such that large values decrease quickly and small values decrease slowly.  Likewise, we want small values to increase quickly, and large values to increase slowly.
+We need to consider two cases: the case of decreasing scaling functions (in which the template coefficient is larger than the target coefficient), and the case of increasing scale functions (in which the target coefficient is larger than the template coefficient).  Since we control the coefficients $r_i$ of the scaling functions, we want to choose $r_i$ such that large values decrease quickly and small values decrease slowly.  Likewise, we want small values to increase quickly, and large values to increase slowly.
 
 NOTE: correct the above to mention that "value" is the change in coefficients, not the coefficient value itself.
 
