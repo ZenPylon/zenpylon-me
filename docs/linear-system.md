@@ -50,24 +50,23 @@ Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
 $$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
 $$\large S_i(t) = c_{i,1}, t \geq \frac{1}{r_i}$$
 
-where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off (i.e. flattens) to the value $c_{i,1}$ for the remainder of interval (i.e. remainder of $[0, 1]$).  We want to choose a set of $r_i$'s such that we minimize $u2$.  Expanding the $S_i$ terms and using sum notation, we have:
+where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off (i.e. flattens) to the value $c_{i,1}$ for the remainder of interval (i.e. remainder of $[0, 1]$).  
 
+Now, suppose we plug in $n$ values of $t$. We want to choose a set of $r_i$'s such that we minimize $u2$.  Expanding the $S_i$ terms and using sum notation, we have:
 
-$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})]\cos{(i \cdot (x_0+tu_1))}$$
-
-Nowe, suppose we plug in $n$ values of $t$. 
 
 $\large t=\frac{1}{n}$
 
-$$\large z_0+\frac{1}{n}u_2=F(x, \frac{1}{n})$$.
+$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{1}{n}u_1))}$$
 $\large t=\frac{2}{n}$
 
-$$\large z_0+\frac{2}{n}u_2=F(x, \frac{2}{n})$$.
+$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{2}{n}u_1))}$$
 $$\vdots$$
 
 $\large t=1$
 
-$$\large z_0+u_2=F(x, 1)$$.
+$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1))}$$
+
 
 
 
