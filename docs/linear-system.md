@@ -138,7 +138,14 @@ Where $c_i$ represents the evaluation of the non-trigonometric terms.  Actually,
 
 $$\large u_2 = \sum_{i=1}^n c_i + a\sin(x + b) - \sum_{i=1}^n sin(i \cdot x_0) $$
 
-TODO: rearrange, solve for $u_2$ in terms of $u_1$.  Then figure out how to solve for $r_i$'s.
+newline
+
+$$\large u_2 + \sum_{i=1}^n [sin(i \cdot x_0) - c_i]  = a\sin(x + b)$$
+
+newline
+
+**Note** - the above is likely not possible, since the cosine terms have different coefficients for $u_1$
+TODO: Solve for $u_2$ in terms of $u_1$.  Then figure out how to solve for $r_i$'s.
 
 
 
