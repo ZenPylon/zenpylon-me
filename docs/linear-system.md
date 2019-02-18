@@ -142,7 +142,7 @@ TODO: rearrange, solve for $u_2$ in terms of $u_1$.  Then figure out how to solv
 
 
 
-**NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $t$ indefinitely to trace it).
+**NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $u_1$ indefinitely to trace it), with $t = 1$.
 
 ----
 
