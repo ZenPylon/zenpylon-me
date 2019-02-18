@@ -69,8 +69,15 @@ $$\large  x_0 + u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \c
 
 If we add these equations, we get:
 
-$$\large n \cdot x_0 + \frac{n(n + 1)}{2} \cdot u_2 = ...$$
+$$\large n \cdot x_0 + \frac{n(n + 1)}{2} \cdot u_2 = [...]$$
 
+newline
+
+$$\large x_0 + \frac{(n + 1)}{2} u_2 = \frac{1}{n}[...]$$
+
+newline
+
+$$\large u_2 = \frac{2}{(n + 1)} \cdot (\frac{1}{n}[...] - x_0)$$
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
