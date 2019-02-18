@@ -81,7 +81,7 @@ $$\large u_2 = \frac{2}{(n + 1)} \cdot (\frac{1}{n}[...] - x_0)$$
 
 Since $x_0$, $\frac{2}{(n + 1)}$, and $\frac{1}{n}$ are given, let's drop them for convenience of notation (though we'll need to add them back later).  With that, we can remove everything except our placeholder $[...]$, and expand the placeholder as follows:
 
-$$\large u_2 = 
+$$\large u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{1}{n}u_1))} + \cdots + \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{n}{n}u_1))}$$
 
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
