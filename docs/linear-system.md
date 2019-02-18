@@ -103,9 +103,13 @@ However, we also need to take into account the value of the cosine term itself a
     **Proposal:** 
     1. For large $n$, we can approximate the cosine sum with the integral on the interval $[0, 1]$.  (The increasing value of $t$ betwen $\frac{1}{n} \cdots \frac{n}{n}$ acts as our continuous variable for large $n$).
     1. Evaluate integral: (TODO, notate) integral.  = $\large \frac{1}{2u_1}[sin(2x_0 + 2u_1) - sin(2x_0)]$
+    1. Worth noting that this term must be in range of $[-\frac{1}{u_1}, \frac{1}{u_1}]$, since the inner term must be in range $[-2, 2]$.
     1. Use sum of sine formula?  
         1. $\large \frac{1}{2u_1}[sin{2x_0}cos{2u_1} + cos{2x_0}sin{2u_1} - sin(2x_0)]$
-    1. Worth noting that this term must be in range of $[-4u_1, 4u_1]$, since the inner term must be in range $[-2, 2]$.
+        1. How to compare to other terms e.g. 
+        
+            $\large \frac{1}{3u_1}[sin{3x_0}cos{3u_1} + cos{3x_0}sin{3u_1} - sin(3x_0)]$
+    
 
 
 1. Sort terms from highest to lowest (absolute value?)
