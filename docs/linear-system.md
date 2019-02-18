@@ -134,19 +134,7 @@ The above technique feels promising, but it's hard to track what we're solving f
 
 $$\large u_2 = \sum_{i=1}^n c_i + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1) - sin(i \cdot x_0)]$$
 
-Where $c_i$ represents the evaluation of the non-trigonometric terms.  Actually, we may be able to apply the formula for the linear combination of sinusoids to condense this down into one sine wave.  Before attempting, what would this look like?
-
-$$\large u_2 = \sum_{i=1}^n c_i + a\sin(x + b) - \sum_{i=1}^n sin(i \cdot x_0) $$
-
-newline
-
-$$\large u_2 + \sum_{i=1}^n [sin(i \cdot x_0) - c_i]  = a\sin(x + b)$$
-
-newline
-
-**Note** - the above is likely not possible, since the cosine terms have different coefficients for $u_1$
-TODO: Solve for $u_2$ in terms of $u_1$.  Then figure out how to solve for $r_i$'s.
-
+Where $c_i$ represents the evaluation of the non-trigonometric terms.
 
 
 **NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $u_1$ indefinitely to trace it), with $t = 1$.
