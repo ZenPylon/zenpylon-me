@@ -102,10 +102,13 @@ However, we also need to take into account the value of the cosine term itself a
 1. Figure out how to handle the $u_1$ term in the cosine functions.  How to evaluate function at each point, or across range 0-->1?
 
     **Proposal:** 
-    1. For large $n$, we an approximate the cosine sum with the integral on the interval $[0, 1]$.  (The increasing value of $t$ betwen $\frac{1}{n} \cdots \frac{n}{n}$ acts as our continuous variable for large $n$).
+    1. For large $n$, we can approximate the cosine sum with the integral on the interval $[0, 1]$.  (The increasing value of $t$ betwen $\frac{1}{n} \cdots \frac{n}{n}$ acts as our continuous variable for large $n$).
     1. Evaluate integral: (TODO, notate) integral.  = $\large \frac{1}{2u_1}[sin(2x_0 + 2u_1) - sin(2x_0)]$
+    1. Use sum of sine formula?  
+        1. $\large \frac{1}{2u_1}[sin{2x_0}cos{2u_1} + cos{2x_0}sin{2u_1} - sin(2x_0)]$
+    1. Worth noting that this term must be in range of $[-4u_1, 4u_1]$, since the inner term must be in range $[-2, 2]$.
 
-1. 
+
 1. Sort terms from highest to lowest (absolute value?)
 1. Set rate in accordance 
 
