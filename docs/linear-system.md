@@ -67,7 +67,7 @@ $\large t=1$
 
 $$\large  x_0 + u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1))}$$
 
-If we add these equations, we get:
+If we add these equations together, we can get another equation in terms of $u_2$:
 
 $$\large n \cdot x_0 + \frac{n(n + 1)}{2} \cdot u_2 = [...]$$
 
@@ -78,6 +78,11 @@ $$\large x_0 + \frac{(n + 1)}{2} u_2 = \frac{1}{n}[...]$$
 newline
 
 $$\large u_2 = \frac{2}{(n + 1)} \cdot (\frac{1}{n}[...] - x_0)$$
+
+Since $x_0$, $\frac{2}{(n + 1)}$, and $\frac{1}{n}$ are given, let's drop them for convenience of notation (though we'll need to add them back later).  With that, we can remove everything except our placeholder $[...]$, and expand the placeholder as follows:
+
+$$\large u_2 = 
+
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
