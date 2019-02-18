@@ -47,7 +47,7 @@ Suppose that we follow our trace line in small increments of $t$, with each segm
 ## Approach: t-increments with piecewise-linear scale functions
 Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
 
-$$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
+$$\large S_i(t) = c_{i,0}+t \cdot r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
 $$\large S_i(t) = c_{i,1}, t \geq \frac{1}{r_i}$$
 
 where $c_{i,0}$ is the i-th Fourier coefficient of the template function, $c_{i,1}$ is the is the i-th Fourier coefficient of the target function, and $r_i \geq 1$ is the rate parameter.  In other words, the Fourier coefficients of the template function linearly approach the Fourier coefficients of the target function, with a rate of $r_i$.  When the target function coefficient has been reached, the scale function levels off (i.e. flattens) to the value $c_{i,1}$ for the remainder of interval (i.e. remainder of $[0, 1]$).  
@@ -83,13 +83,19 @@ Since $x_0$, $\frac{2}{(n + 1)}$, and $\frac{1}{n}$ are given, let's drop them f
 
 $$\large u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{1}{n}u_1))} + \cdots + \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+\frac{n}{n}u_1))}$$.
 
+**NOTE:** correct the above equations to include the factor $t$ with the $r_i$ (at whatever value)
+
 So, how can we choose $r_i$ such that $u_2$ is minimized?  $u_2$ still exists as a sum.  If we can minimize each term in that sum, $u_2$ should also be minimized in the process.  Note that our scaling functions (i.e. our piecewise-linear functions) are invoked multiple times, one at each value of $t$.  Note, also, that at a certain value of $t$, the value of that function will flatten to a constant. In terms of the equation, that means that at a certain value of $t$, all terms to the right involving $S_i(t)$ have the same value.
 
 We need to consider two cases: the case of decreasing scaling functions (in which the template coefficient is larger than the target coefficient), and the case of increasing scale functions (in which the target coefficient is larger than the template coefficient).  Since we control the coefficients $r_i$ of the scaling functions, we want to choose $r_i$ such that large values decrease quickly and small values decrease slowly.  Likewise, we want small values to increase quickly, and large values to increase slowly.
 
-NOTE: correct the above to mention that "value" is the change in coefficients, not the coefficient value itself.
+**NOTE:** correct the above to mention that "value" is the change in coefficients, not the coefficient value itself.
 
-However, we also need to take into account the value of the cosine term itself as $t$ goes from 0 to 1.
+
+However, we also need to take into account the value of the cosine term itself as $t$ goes from 0 to 1.  
+
+1. Separate into increasing and decreasing terms.
+1. Collect all the terms involving $r_i$ for each $i$.  e.g. $[n \cdot c_{2,0} + r_i(\frac{1}{n}[c_{2,1} - c_{2,0}] + \frac{2}{n}[c_{2,1} - c_{2,0}] + \cdots )]$, where each term in brackets has a factor of $t$ (for that particular equation)
 
 ----
 
