@@ -132,10 +132,9 @@ We can split up terms based on the before and after point for the scaling functi
 
 The above technique feels promising, but it's hard to track what we're solving for.  Let's take a step back.  We've been focusing on minimizing $u_2$.  However, we also need to *solve* for $u_2$.  Even if we solve for our $r_i$'s, will we be able to solve for r$u_2$.  With known values of $r_i$, the equation becomes:
 
-$$\large u_2 = \sum_{i=1}^n c_i + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1) - sin(i \cdot x_0)]$$
+$$\large u_2 = \sum_{i=1}^n c_i + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1)) - sin(i \cdot x_0)]$$
 
 Where $c_i$ represents the evaluation of the non-trigonometric terms.
-
 
 **NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $u_1$ indefinitely to trace it), with $t = 1$.
 
