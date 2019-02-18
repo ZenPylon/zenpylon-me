@@ -57,18 +57,19 @@ Now, suppose we plug in $n$ values of $t$. We want to choose a set of $r_i$'s su
 
 $\large t=\frac{1}{n}$
 
-$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{1}{n}u_1))}$$
+$$\large x_0 + \frac{1}{n}u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{1}{n}u_1))}$$
 $\large t=\frac{2}{n}$
 
-$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{2}{n}u_1))}$$
+$$\large  x_0 + \frac{2}{n}u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0 + \frac{2}{n}u_1))}$$
 $$\vdots$$
 
 $\large t=1$
 
-$$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1))}$$
+$$\large  x_0 + u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1))}$$
 
+If we add these equations, we get:
 
-
+$$\large n \cdot x_0 + \frac{n(n + 1)}{2} \cdot u_1 = ...$$
 
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
