@@ -41,10 +41,10 @@ The first thing to note from our equation involving $u_1$ and $u_2$ is that we h
 
 Ultimately, we want to find a set of $S_i(t)$ such that we minimize $u_2$ from which we will then calculate $u_1$. 
 
-### Approach: t-increments
+## Approach: t-increments
 Suppose that we follow our trace line in small increments of $t$, with each segment $j$ starting at $\large \frac{j}{m}$ and having length $\large \frac{1}{m}$.  
 
-### Approach: t-increments with piecewise-linear scale functions
+###Approach: t-increments with piecewise-linear scale functions
 Suppose we let our scaling functions, $S_i(t)$, take the piecewise-linear form
 
 $$\large S_i(t) = c_{i,0}+r_i(c_{i,1}-c_{i,0}), t < \frac{1}{r_i}$$
@@ -73,7 +73,7 @@ $$\large \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1
 
 One of the challenges here is that introducing more values of $t$ also introduces more terms, since the argument of the cosine function changes when $t$ changes. 
 
-### Approach: Sum of cosines formula
+## Approach: Sum of cosines formula
 Apply the sum of cosines formula.
 
 $$\large z_0 + tu_2 = S_1(t)[\cos(x_0)\cos(tu_1) - \sin(x_0)\sin(tu_1)]+\ldots + S_n(t)[ \cos(n \cdot x_0)\cos(n \cdot tu_1)-\sin(n \cdot x_0)\sin(n \cdot tu_1)]$$.
@@ -87,11 +87,11 @@ With separated cosines and sines:
 $$\large x_0 + tu_2 = \sum_{k=1}^{n} S_k(t)[ \cos(k \cdot x_0)\cos(k \cdot tu_1)] - \sum_{k=1}^{n} S_k(t)[ \sin(k \cdot x_0)\sin(k \cdot tu_1)]$$
 
 
-### Approach: linear combination of sinusoids
+## Approach: linear combination of sinusoids
 Collect similar terms via the [linear combination](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#More_than_two_sinusoids).
 
 
-### Approach: evaluate at t-increments, create system of equations
+## Approach: evaluate at t-increments, create system of equations
 Suppose we trace the line in n segments, with each segment of length 1/n.  Then on the kth segment, $t=k/n$.  To build intuition, let's start with $n=5$.
 
 $$k=1$$
