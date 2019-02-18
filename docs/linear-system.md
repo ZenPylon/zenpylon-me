@@ -89,7 +89,7 @@ So, how can we choose $r_i$ such that $u_2$ is minimized?  $u_2$ still exists as
 
 We need to consider two cases: the case of decreasing scaling functions (in which the template coefficient is larger than the target coefficient), and the case of increasing scale functions (in which the target coefficient is larger than the template coefficient).  Since we control the coefficients $r_i$ of the scaling functions, we want to choose $r_i$ such that large values decrease quickly and small values decrease slowly.  Likewise, we want small values to increase quickly, and large values to increase slowly.
 
-**NOTE:** correct the above to mention that "value" is the change in coefficients, not the coefficient value itself.
+**NOTE:** correct the above to mention that "value" is the differencee in coefficients, not the coefficient value itself.
 
 
 However, we also need to take into account the value of the cosine term itself as $t$ goes from 0 to 1.  
