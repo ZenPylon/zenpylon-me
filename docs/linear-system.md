@@ -121,11 +121,28 @@ $$\large w_i = \frac{1}{n}[c_{i,1} - c_{i,0}] + \cdots + \frac{n}{n}[c_{i,1} - c
 Then we have 
 
 $$\large u_2 = \sum_{i=1}^n n \cdot c_{i, 0} + r_i w_i$$
+
+We can split up terms based on the before and after point for the scaling function, that is, the point where the function flattens.
+
 1. Sort terms from highest to lowest (absolute value?)
 1. Set rate in accordance 
 
 
+### Reflection on the above technique
 
+The above technique feels promising, but it's hard to track what we're solving for.  Let's take a step back.  We've been focusing on minimizing $u_2$.  However, we also need to *solve* for $u_2$.  Even if we solve for our $r_i$'s, will we be able to solve for r$u_2$.  With known values of $r_i$, the equation becomes:
+
+$$\large u_2 = \sum_{i=1}^n c_i + \frac{1}{i \cdot u_1}[sin(i(x_0 + u_1) - sin(i \cdot x_0)]$$
+
+Where $c_i$ represents the evaluation of the non-trigonometric terms.  Actually, we may be able to apply the formula for the linear combination of sinusoids to condense this down into one sine wave.  Before attempting, what would this look like?
+
+$$\large u_2 = \sum_{i=1}^n c_i + a\sin(x + b) - \sum_{i=1}^n sin(i \cdot x_0) $$
+
+TODO: rearrange, solve for $u_2$ in terms of $u_1$.  Then figure out how to solve for $r_i$'s.
+
+
+
+**NOTE**: maybe we *don't* need to solve for $u_2$.  If we can solve for $u_2$ in terms of $u_1$, then we have the making of a line (just increase the value of $t$ indefinitely to trace it).
 
 ----
 
