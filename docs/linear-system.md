@@ -65,7 +65,7 @@ $$\vdots$$
 
 $\large t=1$
 
-$$\large  x_0 + u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+tu_1))}$$
+$$\large  x_0 + u_2 = \sum_{i=1}^n [c_{i,0} + r_i(c_{i,1} - c_{i,0})] \cos{(i \cdot (x_0+u_1))}$$
 
 If we add these equations together, we can get another equation in terms of $u_2$:
 
