@@ -14,10 +14,9 @@ Important questions:
 1. How do we determine the value of $x$ that is mapped to the new height?
 1. How can we minimize the vertical distance?
 
-Suppose we apply the nudge $\large ∆c_i$.  Then we have:
+In the following section, the second coefficient subscript refers to the number of nudges.  E.g. $c_{3, 0}$ is the third coefficient having received 0 nudges, $c_{3, 4}$ is the third coefficient having received 4 nudges.  Suppose we apply the first nudge as $\large ∆c_i$.  Then we have:
 
-$$\large c_1\cos(x) + c_2\cos(2x) + \cdots + (c_{i} + ∆c_i)\cos(i \cdot x) + \cdots + c_n\cos(n \cdot x)$$
+$$\large c_{1, 0}\cos(x) + c_{2, 0}\cos(2x) + \cdots + (c_{i, 0} + ∆c_i)\cos(i \cdot x) + \cdots + c_{n, 0}\cos(n \cdot x)$$
 
-Note - we'll need a way to keep track of which coefficient is which (i.e. how many nudges have happened).
 
 Note: this approach is based on the (potentially false) assumption that small change in the Fourier coefficients can be realized by a small change in $x$. 
