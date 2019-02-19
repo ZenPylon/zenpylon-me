@@ -8,6 +8,12 @@ $\LARGE ∆c_i = \frac{c_{i, 1} - c_{i, 0}}{m}$
 
 where the integer $m$ denotes the number of "nudges" each coefficient is allotted.  (Alternatively, we could just set it to some small value, since the subsequent reasoning will require that $∆c_i$ is small.  In total, there are $n \cdot m$ nudges.  During the morphing process, the nudges allotted for each coefficient are applied in some order.  Can we find an order that minimizes the "vertical distance" while allowing us to trace the route to get there (the "x distance").
 
+Important questions:
+
+1. How do we determine the "vertical distance" traveled?
+1. How do we determine the value of $x$ that is mapped to the new height?
+1. How can we minimize the vertical distance?
+
 
 
 
