@@ -4,9 +4,11 @@ Remember the Fourier coefficients of the template function, $[c_{1, 0}, \cdots, 
 
 For example, we could imagine each "nudge" being some fraction of the difference between the template and target coefficient values.  More formally, let 
 
-$\LARGE ∆c_i = \frac{ c_{i, 1} - c_{i, 0}}{m}$
+$\LARGE ∆c_i = \frac{c_{i, 1} - c_{i, 0}}{m}$
 
-where the integer $m$ denotes the number of "nudges" each coefficient is allotted.  During the morphing process, 
+where the integer $m$ denotes the number of "nudges" each coefficient is allotted.  (Alternatively, we could just set it to some small value, since the subsequent reasoning will require that $∆c_i$ is small.  In total, there are $n \cdot m$ nudges.  During the morphing process, the nudges allotted for each coefficient are applied in some order.  Can we find an order that minimizes the "vertical distance" while allowing us to trace the route to get there (the "x distance").
+
+
 
 
 Note: this approach is based on the (potentially false) assumption that small change in the Fourier coefficients can be realized by a small change in $x$. 
