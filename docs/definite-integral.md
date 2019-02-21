@@ -27,3 +27,9 @@ $$\large u_2 = \sum_{k=1}^n \int_0^1{S_k^\prime(t)\cos(kx_0 + ku_1t)dt} - u_1 \s
 Let's make a simplifying assumption that $x_0 = 0$ (which is also convenient for defining a template function). Then we have:
 
 $$\large u_2 = \sum_{k=1}^n \int_0^1{S_k^\prime(t)\cos(ku_1t)dt} - u_1 \sum_{k=1}^n k \cdot \int_0^1{S_k(t)sin(ku_1t)}$$
+
+Let's try a Bezier curve in 1-D for the scaling function. Someone made a nice interactive demo of a cubic Bezier curve [here](http://www.demofox.org/bezcubic1d.html). Let's start slightly simpler with a quadratic Bezier curve. Then we have:
+
+$$\large S_k(t) = c_{k, 0} \cdot (1 - t)^2 + p_k \cdot (1-t)t + c_{k, 1} \cdot t^2$$
+
+Where $p_k$ is the parameter that controls the slope of the curve.
