@@ -1,14 +1,16 @@
+## Derivative of S'(t)
+
+2 (b - a (1 - t) - 2 b t + c t)
+
 ## First part
 
-[a*(1 - t)^2 + b*(1 - t)*t + c*t^2]cos(k*u*t)]dt
+**Input**
 
-integral_0^1 (a (1 - t)^2 + b (1 - t) t + c t^2) cos(k u t) dt = (sin(k u) (c k^2 u^2 - 2 (a - b + c)) + k u (2 a - (b - 2 c) cos(k u) - b))/(k^3 u^3)
-
-Integrate[(a (1 - t)^2 + b (1 - t) t + c t^2) Cos[k t u], {t, 0, 1}]
+2 (b - a (1 - t) - 2 b t + c t)*cos(k*u\*t)]dt
 
 **Output**
 
-(k u (2 a - b - (b - 2 c) Cos[k u]) + (-2 (a - b + c) + c k^2 u^2) Sin[k u])/(k^3 u^3)
+(2 (a - 2 b + c) (-1 + Cos[k u]) + 2 (-b + c) k u Sin[k u])/(k^2 u^2)
 
 ## Second part
 
