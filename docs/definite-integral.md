@@ -24,4 +24,4 @@ Evaluate the LHS, apply linearity of summation and integrals. Note how this help
 
 $$\large u_2 = \sum_{k=1}^n \int_0^1{S_k^\prime(t)\cos(kx_0 + ku_1t)dt} - u_1 \sum_{k=1}^n k \cdot \int_0^1{S_k(t)sin(kx_0 + ku_1t)}$$
 
-Wow, pretty sure that this is just going to end up inverting the previous steps. Which means integration by parts probably comes from product rule?
+Wow, pretty sure that this is just going to end up inverting the previous steps. Which means integration by parts probably comes from product rule? Then again...we are adding bounds on the integral. Just do it and fine out.
