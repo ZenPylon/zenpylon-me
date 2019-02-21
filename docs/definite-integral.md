@@ -32,4 +32,6 @@ Let's try a Bezier curve in 1-D for the scaling function. Someone made a nice in
 
 $$\large S_k(t) = c_{k, 0} \cdot (1 - t)^2 + p_k \cdot (1-t)t + c_{k, 1} \cdot t^2$$
 
-Where $p_k$ is the parameter that controls the slope of the curve.
+Where $p_k$ is the parameter that controls the slope of the curve. Plugging this in to the previous equation:
+
+$$\large u_2 = \sum_{k=1}^n \int_0^1{[c_{k, 0} \cdot (1 - t)^2 + p_k \cdot (1-t)t + c_{k, 1} \cdot t^2]\cos(ku_1t)dt} - u_1 \sum_{k=1}^n k \cdot \int_0^1{[c_{k, 0} \cdot (1 - t)^2 + p_k \cdot (1-t)t + c_{k, 1} \cdot t^2]sin(ku_1t)}$$
