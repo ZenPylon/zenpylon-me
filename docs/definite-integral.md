@@ -6,4 +6,4 @@ $$\large x_0 + t \cdot \vec{u} = \sum_{k=1}^n S_k(t)\cos(kx_0 + ku_1t)$$
 
 Taking the derivative with respect to $t$:
 
-$$\large \vec{u} = \sum_{k=1}^n [S_k(t)\cos(kx_0 + ku_1t)]$$
+$$\large \vec{u} = \sum_{k=1}^n [S_k^\prime(t)\cos(kx_0 + ku_1t) - ku_1 \cdot S_k(t)sin(kx_0 + ku_1t)]$$
