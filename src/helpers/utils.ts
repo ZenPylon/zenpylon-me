@@ -30,15 +30,15 @@ export function createLinearArray(min, max, steps): number[] {
 }
 
 export function createTemplateFunction() {
-  const xValues = createLinearArray(-5, 5, 100);
+  const xValues = createLinearArray(0, 2 * Math.PI, 100);
   const yValues = calculateCosineSeries([-1, -1, -1, -1, -1], xValues);
   return xValues.map((x, index) => ({ x, y: yValues[index] }));
 }
 
 export function createTargetFunction() {
-  const xValues = createLinearArray(-5, 5, 100);
+  const xValues = createLinearArray(0, 2 * Math.PI, 100);
   const yValues = calculateCosineSeries(
-    [1 / 10, 2 / 10, 3 / 10, 4 / 10, 5 / 10],
+    [1 / 8, 3 / 10, 5 / 10, 7 / 10, 9 / 10],
     xValues,
   );
   return xValues.map((x, index) => ({ x, y: yValues[index] }));

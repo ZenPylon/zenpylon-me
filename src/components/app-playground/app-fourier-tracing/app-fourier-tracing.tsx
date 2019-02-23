@@ -17,15 +17,17 @@ export class AppFourierTracing {
   private templateData: ChartDataSets = {
     borderColor: 'blue',
     backgroundColor: 'transparent',
-    label: 'Template Function',
     data: createTemplateFunction(),
+    label: 'Template Function',
+    pointRadius: 2,
   };
 
   private targetData: ChartDataSets = {
     borderColor: 'red',
     backgroundColor: 'transparent',
-    label: 'Target Function',
     data: createTargetFunction(),
+    label: 'Target Function',
+    pointRadius: 2,
   };
   @Element() private element: HTMLElement;
 
@@ -44,12 +46,12 @@ export class AppFourierTracing {
         scales: {
           xAxes: [
             {
-              ticks: { min: -8, max: 8 },
+              ticks: { min: 0, max: 8 },
               type: 'linear',
               position: 'bottom',
             },
           ],
-          yAxes: [{ ticks: { min: -10, max: 10 } }],
+          yAxes: [{ ticks: { min: -5, max: 5 } }],
         },
       },
     });
