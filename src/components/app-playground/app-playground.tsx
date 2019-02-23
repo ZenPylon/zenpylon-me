@@ -36,6 +36,18 @@ export class AppPlayground {
             </ion-row>
             <ion-row>
               <ion-col>
+                <ion-button
+                  no-padding
+                  fill="clear"
+                  href="/playground/app-fourier-tracing"
+                >
+                  Fourier Tracing
+                </ion-button>
+                <p>Function morphing and optimization</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
                 <p>Are you content without content?</p>
               </ion-col>
             </ion-row>
