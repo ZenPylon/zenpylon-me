@@ -29,18 +29,26 @@ export class AppFourierTracing {
     label: 'Target Function',
     pointRadius: 2,
   };
+
+  private morphData: ChartDataSets = {
+    borderColor: 'yellow',
+    backgroundColor: 'transparent',
+    data: createTemplateFunction(),
+    label: 'Morph Function',
+    pointRadius: 2,
+  };
+
   @Element() private element: HTMLElement;
 
   componentDidLoad() {
     this.mainFourierCanvas = (this.element.querySelector(
       '#main-fourier-plot',
     ) as HTMLCanvasElement).getContext('2d');
-    console.log(this.mainFourierCanvas);
 
     this.mainFourierChart = new Chart(this.mainFourierCanvas, {
       type: 'line',
       data: {
-        datasets: [this.templateData, this.targetData],
+        datasets: [this.templateData, this.targetData, this.morphData],
       },
       options: {
         scales: {
@@ -63,6 +71,8 @@ export class AppFourierTracing {
       <ion-content>
         <ion-grid padding>
           <canvas id="main-fourier-plot" />
+          //@ts-ignore
+          <ion-range min="0" max="1" step="100" />
         </ion-grid>
       </ion-content>,
     ];
