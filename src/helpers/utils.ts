@@ -43,4 +43,11 @@ export function createTargetFunction() {
   return xValues.map((x, index) => ({ x, y: targetYValues[index] }));
 }
 
-export function createMorphFunction(t: number) {}
+export function createMorphFunction(t: number) {
+  return templateYValues
+    .map(
+      (templateYValue, index) =>
+        templateYValue + t * (targetYValues[index] - templateYValue),
+    )
+    .map((morphYValue, index) => ({ x: xValues[index], y: morphYValue }));
+}
