@@ -10,6 +10,8 @@ export class AppFourierTracing {
   // @ts-ignore
   private mainFourierChart: Chart;
   private templateData: ChartDataSets = {
+    borderColor: 'blue',
+    backgroundColor: 'transparent',
     label: 'Template Function',
     data: [
       { x: 1, y: 1 },
@@ -21,11 +23,7 @@ export class AppFourierTracing {
   };
   @Element() private element: HTMLElement;
 
-  componentWillLoad() {
-    console.log('component load');
-  }
   componentDidLoad() {
-    console.log('console');
     this.mainFourierCanvas = (this.element.querySelector(
       '#main-fourier-plot',
     ) as HTMLCanvasElement).getContext('2d');
