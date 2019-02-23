@@ -16,7 +16,7 @@ export class AppRoot {
             component="app-polynomial-sphere"
           />
           <ion-route
-            url="/playground/app-fourier-tracing"
+            url="/playground/fourier-tracing"
             component="app-fourier-tracing"
           />
           <ion-route url="/about" component="app-about" />
