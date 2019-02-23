@@ -39,7 +39,7 @@ export class AppPlayground {
                 <ion-button
                   no-padding
                   fill="clear"
-                  href="/playground/app-fourier-tracing"
+                  href="/playground/fourier-tracing"
                 >
                   Fourier Tracing
                 </ion-button>
