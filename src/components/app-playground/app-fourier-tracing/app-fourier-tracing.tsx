@@ -38,10 +38,12 @@ export class AppFourierTracing {
         scales: {
           xAxes: [
             {
+              ticks: { min: -8, max: 8 },
               type: 'linear',
               position: 'bottom',
             },
           ],
+          yAxes: [{ ticks: { min: -10, max: 10 } }],
         },
       },
     });
