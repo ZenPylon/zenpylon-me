@@ -17,20 +17,21 @@ export function calculateCosineSeries(
   return yValues;
 }
 
-export function createLinearArray(numElements: number): number[] {
-  if (numElements < 1) {
-    throw Error('numElements must be greater than 0');
+export function createLinearArray(min, max, steps): number[] {
+  if (steps < 1) {
+    throw Error('steps must be greater than 0');
   }
-  const values = Array(numElements);
-  for (let i = 0; i < numElements; i++) {
-    values[i] = i;
+  const values = Array(steps + 1);
+  const step = (max - min) / steps;
+  for (let i = 0; i <= steps; i++) {
+    values[i] = min + i * step;
   }
   return values;
 }
 
 export function createTemplateFunction() {
-  const xValues = [-5, -4, -3, -2, 1, 0, 1, 2, 3, 4, 5];
-  const yValues = calculateCosineSeries([1, 1, 1], xValues);
+  const xValues = createLinearArray(-5, 5, 100);
+  const yValues = calculateCosineSeries([-1, -1, -1, -1, -1], xValues);
 
   return xValues.map((x, index) => ({ x, y: yValues[index] }));
 }
