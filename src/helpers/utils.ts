@@ -25,5 +25,9 @@ export function createLinearArray(numElements: number): number[] {
 }
 
 export function createTemplateFunction() {
-  calculateCosineSeries();
+  const xValues = [-5, -4, -3, -2, 1, 0, 1, 2, 3, 4, 5];
+  const yValues = calculateCosineSeries([1, 1, 1], xValues);
+  return xValues.map((x, index) => {
+    return { x, y: yValues[index] };
+  });
 }
