@@ -49,5 +49,8 @@ export function createMorphFunction(t: number) {
       templateCoefficient +
       t * (targetCoefficients[index] - templateCoefficient),
   );
-  return calculateCosineSeries(morphCoefficients, xValues);
+  return calculateCosineSeries(morphCoefficients, xValues).map((y, index) => ({
+    x: xValues[index],
+    y,
+  }));
 }
