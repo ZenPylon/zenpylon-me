@@ -1,12 +1,8 @@
 export function calculateCosineSeries(
   coefficients: number[],
   xValues: number[],
-  numTerms: number,
 ) {
-  if (coefficients.length !== xValues.length) {
-    throw Error('Coefficients and xValues must be of same length');
-  }
-  const waveNumbers = createLinearArray(numTerms);
+  const waveNumbers = createLinearArray(xValues.length);
   const yValues = Array(xValues.length);
   xValues.forEach((x, index) => {
     yValues[index] = waveNumbers.map(
@@ -26,4 +22,8 @@ export function createLinearArray(numElements: number): number[] {
     values[i] = i;
   }
   return values;
+}
+
+export function createTemplateFunction() {
+  calculateCosineSeries();
 }

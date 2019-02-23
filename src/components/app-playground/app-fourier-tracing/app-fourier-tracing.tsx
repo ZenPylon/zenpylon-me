@@ -1,5 +1,6 @@
 import { Component, Element } from '@stencil/core';
 import Chart, { ChartDataSets } from 'chart.js';
+import { createLinearArray } from 'src/helpers/utils';
 
 @Component({
   tag: 'app-fourier-tracing',
@@ -9,17 +10,13 @@ export class AppFourierTracing {
   private mainFourierCanvas: CanvasRenderingContext2D;
   // @ts-ignore
   private mainFourierChart: Chart;
+  private xValues = createLinearArray(10);
+
   private templateData: ChartDataSets = {
     borderColor: 'blue',
     backgroundColor: 'transparent',
     label: 'Template Function',
-    data: [
-      { x: 1, y: 1 },
-      { x: 2, y: 4 },
-      { x: 3, y: 6 },
-      { x: 4, y: 2 },
-      { x: 5, y: -2 },
-    ],
+    data: [linearArray.map(x => {x, y: }}), 
   };
 
   private targetData: ChartDataSets = {
