@@ -21,6 +21,19 @@ export class AppFourierTracing {
       { x: 5, y: -2 },
     ],
   };
+
+  private targetData: ChartDataSets = {
+    borderColor: 'red',
+    backgroundColor: 'transparent',
+    label: 'Template Function',
+    data: [
+      { x: 1, y: -1 },
+      { x: 2, y: 2 },
+      { x: 3, y: 3 },
+      { x: 4, y: 3 },
+      { x: 5, y: 0 },
+    ],
+  };
   @Element() private element: HTMLElement;
 
   componentDidLoad() {
@@ -32,7 +45,7 @@ export class AppFourierTracing {
     this.mainFourierChart = new Chart(this.mainFourierCanvas, {
       type: 'line',
       data: {
-        datasets: [this.templateData],
+        datasets: [this.templateData, this.targetData],
       },
       options: {
         scales: {
