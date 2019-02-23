@@ -18,6 +18,7 @@
     "@ionic/core": "4.0.0",
     "@types/plotly.js": "^1.43.1",
     "@types/three": "^0.93.19",
+    "chart.js": "^2.7.3",
     "color-map": "^1.1.0",
     "plotly.js-gl3d-dist": "^1.44.4",
     "three": "^0.101.1"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@stencil/core": "0.17.0",
     "@stencil/sass": "^0.1.1",
+    "@types/chart.js": "^2.7.45",
     "@types/jest": "23.3.13",
     "@types/puppeteer": "1.12.0",
     "jest": "23.6.0",

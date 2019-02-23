@@ -1,16 +1,28 @@
-import { Component } from '@stencil/core';
-import Plotly from 'plotly.js-dist';
+import { Component, Element } from '@stencil/core';
+import Chart from 'chart.js';
 
 @Component({
   tag: 'app-fourier-tracing',
   styleUrl: 'app-fourier-tracing.scss',
 })
 export class AppPlayground {
-  xData = [1, 2, 3, 4, 5];
-  yData = [5, 3, 1, 2, -3];
+  private mainFourierCanvas: HTMLCanvasElement;
+  private mainFourierChart: Chart;
+  private points: any = [
+    { x: 1, y: 1 },
+    { x: 2, y: 4 },
+    { x: 3, y: 6 },
+    { x: 4, y: 2 },
+    { x: 5, y: -2 },
+  ];
+  @Element() private element: HTMLElement;
 
-  constructor() {
-    Plotly.newPlot('main-fourier-plot', [{ x: this.xData, y: this.yData }], {});
+  componentDidLoad() {
+    this.mainFourierCanvas = this.element.querySelector('#main-fourier-plot');
+    this.mainFourierChart = new Chart(this.mainFourierCanvas, {
+      type: 'line',
+      data: this.points,
+    });
   }
 
   render() {
@@ -18,7 +30,7 @@ export class AppPlayground {
       <app-header />,
       <ion-content>
         <ion-grid padding>
-          <div id="main-fourier-plot" />
+          <canvas id="main-fourier-plot" />
         </ion-grid>
       </ion-content>,
     ];
