@@ -4,7 +4,6 @@ export function calculateCosineSeries(
 ) {
   const yValues = Array(xValues.length);
   xValues.forEach((x, index) => {
-    debugger;
     let waveSum = 0;
 
     // CoefficientIndex + 1 is the wave number
@@ -33,8 +32,5 @@ export function createTemplateFunction() {
   const xValues = [-5, -4, -3, -2, 1, 0, 1, 2, 3, 4, 5];
   const yValues = calculateCosineSeries([1, 1, 1], xValues);
 
-  return xValues.map((x, index) => {
-      return { x, y: yValues[index] };
-    }),
-  );
+  return xValues.map((x, index) => ({ x, y: yValues[index] }));
 }
