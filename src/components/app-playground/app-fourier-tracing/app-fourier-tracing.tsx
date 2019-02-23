@@ -71,8 +71,13 @@ export class AppFourierTracing {
       <ion-content>
         <ion-grid padding>
           <canvas id="main-fourier-plot" />
-          //@ts-ignore
-          <ion-range min="0" max="1" step="100" />
+          <ion-row>
+            <ion-col size="3">
+              {/* 
+              // @ts-ignore */}
+              <ion-range min="0" max="1" step="100" />
+            </ion-col>
+          </ion-row>
         </ion-grid>
       </ion-content>,
     ];
