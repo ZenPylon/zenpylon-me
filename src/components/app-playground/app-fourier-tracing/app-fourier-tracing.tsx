@@ -4,6 +4,7 @@ import {
   createTemplateFunction,
   createTargetFunction,
 } from './../../../helpers/utils';
+import { RangeChangeEventDetail } from '@ionic/core';
 
 @Component({
   tag: 'app-fourier-tracing',
@@ -65,6 +66,11 @@ export class AppFourierTracing {
     });
   }
 
+  updateMorphFunction(event: CustomEvent<RangeChangeEventDetail>) {
+    debugger;
+    console.log(event);
+  }
+
   render() {
     return [
       <app-header />,
@@ -72,11 +78,13 @@ export class AppFourierTracing {
         <ion-grid padding>
           <canvas id="main-fourier-plot" />
           <ion-row>
+            {/* prettier-ignore */}
             <ion-col size="3">
-              {/* 
+              {/*
               // @ts-ignore */}
-              <ion-range min="0" max="1" step="100" />
+              <ion-range ionChange={ev => this.updateMorphFunction(ev)} min="0" max="1" step="100" />
             </ion-col>
+            {/* prettier-ignore-end */}
           </ion-row>
         </ion-grid>
       </ion-content>,
