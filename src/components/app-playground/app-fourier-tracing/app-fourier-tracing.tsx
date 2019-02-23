@@ -3,6 +3,7 @@ import Chart, { ChartDataSets } from 'chart.js';
 import {
   createTemplateFunction,
   createTargetFunction,
+  createMorphFunction,
 } from './../../../helpers/utils';
 import { RangeChangeEventDetail } from '@ionic/core';
 
@@ -32,11 +33,11 @@ export class AppFourierTracing {
   };
 
   private morphData: ChartDataSets = {
-    borderColor: 'yellow',
+    borderColor: 'green',
     backgroundColor: 'transparent',
     data: createTemplateFunction(),
     label: 'Morph Function',
-    pointRadius: 2,
+    pointRadius: 3,
   };
 
   @Element() private element: HTMLElement;
@@ -52,6 +53,13 @@ export class AppFourierTracing {
         datasets: [this.templateData, this.targetData, this.morphData],
       },
       options: {
+        animation: {
+          duration: 0, // general animation time
+        },
+        hover: {
+          animationDuration: 0, // duration of animations when hovering an item
+        },
+        responsiveAnimationDuration: 0, // animation duration after a resize
         scales: {
           xAxes: [
             {
@@ -68,7 +76,9 @@ export class AppFourierTracing {
 
   updateMorphFunction(event: CustomEvent<RangeChangeEventDetail>) {
     debugger;
-    console.log(event);
+    const t = event.detail.value as number;
+    this.mainFourierChart.data.datasets[2].data = createMorphFunction(t);
+    this.mainFourierChart.update();
   }
 
   render() {
@@ -82,7 +92,7 @@ export class AppFourierTracing {
             <ion-col size="3">
               {/*
               // @ts-ignore */}
-              <ion-range ionChange={ev => this.updateMorphFunction(ev)} min="0" max="1" step="100" />
+              <ion-range onIonChange={ev => this.updateMorphFunction(ev)} min="0" max="1" step=".01" />
             </ion-col>
             {/* prettier-ignore-end */}
           </ion-row>
