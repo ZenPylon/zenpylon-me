@@ -1,14 +1,23 @@
-export function calculateFourierSeries(
+export function calculateCosineSeries(
   coefficients: number[],
   xValues: number[],
+  numTerms: number,
 ) {
   if (coefficients.length !== xValues.length) {
     throw Error('Coefficients and xValues must be of same length');
   }
-  return coefficients.map((coefficient, index) => coefficient * xValues[index]);
+  const waveNumbers = createLinearArray(numTerms);
+  const yValues = Array(xValues.length);
+  xValues.forEach((x, index) => {
+    yValues[index] = waveNumbers.map(
+      waveNumber => coefficients[index] * Math.cos(waveNumber * x),
+    );
+  });
+
+  return yValues;
 }
 
-export function createLinearArray(numElements: number) {
+export function createLinearArray(numElements: number): number[] {
   if (numElements < 1) {
     throw Error('numElements must be greater than 0');
   }
@@ -16,5 +25,5 @@ export function createLinearArray(numElements: number) {
   for (let i = 0; i < numElements; i++) {
     values[i] = i;
   }
-  return;
+  return values;
 }
