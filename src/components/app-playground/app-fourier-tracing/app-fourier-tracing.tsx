@@ -32,8 +32,14 @@ export class AppPlayground {
         scales: {
           xAxes: [
             {
+              ticks: { min: -5, max: 5 },
               type: 'linear',
               position: 'bottom',
+            },
+          ],
+          yAxes: [
+            {
+              ticks: { min: -5, max: 5 },
             },
           ],
         },
