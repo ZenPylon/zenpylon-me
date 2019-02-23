@@ -5,8 +5,8 @@ import { Chart, ChartDataSets } from 'chart.js';
   tag: 'app-fourier-tracing',
   styleUrl: 'app-fourier-tracing.scss',
 })
-export class AppPlayground {
-  private mainFourierCanvas: HTMLCanvasElement;
+export class AppFourierTracing {
+  private mainFourierCanvas: CanvasRenderingContext2D;
   // @ts-ignore
   private mainFourierChart: Chart;
   private templateData: ChartDataSets = {
@@ -21,8 +21,16 @@ export class AppPlayground {
   };
   @Element() private element: HTMLElement;
 
+  componentWillLoad() {
+    console.log('component load');
+  }
   componentDidLoad() {
-    this.mainFourierCanvas = this.element.querySelector('#main-fourier-plot');
+    console.log('console');
+    this.mainFourierCanvas = (this.element.querySelector(
+      '#main-fourier-plot',
+    ) as HTMLCanvasElement).getContext('2d');
+    console.log(this.mainFourierCanvas);
+
     this.mainFourierChart = new Chart(this.mainFourierCanvas, {
       type: 'line',
       data: {
