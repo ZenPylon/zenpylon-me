@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "@ionic/core": "4.0.0",
+    "@types/plotly.js": "^1.43.1",
     "@types/three": "^0.93.19",
     "color-map": "^1.1.0",
+    "plotly.js-dist": "^1.44.4",
     "three": "^0.101.1"
   },
   "devDependencies": {
