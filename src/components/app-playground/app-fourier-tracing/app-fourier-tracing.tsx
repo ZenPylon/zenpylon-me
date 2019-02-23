@@ -1,5 +1,5 @@
 import { Component, Element } from '@stencil/core';
-import { Chart, ChartDataSets } from 'chart.js';
+import Chart, { ChartDataSets } from 'chart.js';
 
 @Component({
   tag: 'app-fourier-tracing',
@@ -40,14 +40,8 @@ export class AppFourierTracing {
         scales: {
           xAxes: [
             {
-              ticks: { min: -5, max: 5 },
               type: 'linear',
               position: 'bottom',
-            },
-          ],
-          yAxes: [
-            {
-              ticks: { min: -5, max: 5 },
             },
           ],
         },
