@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "module": "esnext",
     "paths": {
-      "plotly.js-dist": ["node_modules/@types/plotly.js"]
+      "plotly.js-gl3d-dist": ["node_modules/@types/plotly.js"]
     },
     "target": "es2017",
     "noUnusedLocals": true,
