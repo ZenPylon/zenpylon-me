@@ -22,6 +22,9 @@ export namespace Components {
   interface AppHome {}
   interface AppHomeAttributes extends StencilHTMLAttributes {}
 
+  interface AppFourierTracing {}
+  interface AppFourierTracingAttributes extends StencilHTMLAttributes {}
+
   interface AppPlayground {}
   interface AppPlaygroundAttributes extends StencilHTMLAttributes {}
 
@@ -40,6 +43,7 @@ declare global {
     'AppAbout': Components.AppAbout;
     'AppHeader': Components.AppHeader;
     'AppHome': Components.AppHome;
+    'AppFourierTracing': Components.AppFourierTracing;
     'AppPlayground': Components.AppPlayground;
     'AppPolynomialSphere': Components.AppPolynomialSphere;
     'PolynomialSphere': Components.PolynomialSphere;
@@ -50,6 +54,7 @@ declare global {
     'app-about': Components.AppAboutAttributes;
     'app-header': Components.AppHeaderAttributes;
     'app-home': Components.AppHomeAttributes;
+    'app-fourier-tracing': Components.AppFourierTracingAttributes;
     'app-playground': Components.AppPlaygroundAttributes;
     'app-polynomial-sphere': Components.AppPolynomialSphereAttributes;
     'polynomial-sphere': Components.PolynomialSphereAttributes;
@@ -73,6 +78,12 @@ declare global {
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
+  };
+
+  interface HTMLAppFourierTracingElement extends Components.AppFourierTracing, HTMLStencilElement {}
+  var HTMLAppFourierTracingElement: {
+    prototype: HTMLAppFourierTracingElement;
+    new (): HTMLAppFourierTracingElement;
   };
 
   interface HTMLAppPlaygroundElement extends Components.AppPlayground, HTMLStencilElement {}
@@ -103,6 +114,7 @@ declare global {
     'app-about': HTMLAppAboutElement
     'app-header': HTMLAppHeaderElement
     'app-home': HTMLAppHomeElement
+    'app-fourier-tracing': HTMLAppFourierTracingElement
     'app-playground': HTMLAppPlaygroundElement
     'app-polynomial-sphere': HTMLAppPolynomialSphereElement
     'polynomial-sphere': HTMLPolynomialSphereElement
@@ -113,6 +125,7 @@ declare global {
     'app-about': HTMLAppAboutElement;
     'app-header': HTMLAppHeaderElement;
     'app-home': HTMLAppHomeElement;
+    'app-fourier-tracing': HTMLAppFourierTracingElement;
     'app-playground': HTMLAppPlaygroundElement;
     'app-polynomial-sphere': HTMLAppPolynomialSphereElement;
     'polynomial-sphere': HTMLPolynomialSphereElement;
