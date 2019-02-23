@@ -1,3 +1,9 @@
+const xValues = createLinearArray(0, 2 * Math.PI, 100);
+const templateYValues = calculateCosineSeries([-1, -1, -1, -1, -1], xValues);
+const targetYValues = calculateCosineSeries(
+  [1 / 8, 3 / 10, 5 / 10, 7 / 10, 9 / 10],
+  xValues,
+);
 export function calculateCosineSeries(
   coefficients: number[],
   xValues: number[],
@@ -30,16 +36,11 @@ export function createLinearArray(min, max, steps): number[] {
 }
 
 export function createTemplateFunction() {
-  const xValues = createLinearArray(0, 2 * Math.PI, 100);
-  const yValues = calculateCosineSeries([-1, -1, -1, -1, -1], xValues);
-  return xValues.map((x, index) => ({ x, y: yValues[index] }));
+  return xValues.map((x, index) => ({ x, y: templateYValues[index] }));
 }
 
 export function createTargetFunction() {
-  const xValues = createLinearArray(0, 2 * Math.PI, 100);
-  const yValues = calculateCosineSeries(
-    [1 / 8, 3 / 10, 5 / 10, 7 / 10, 9 / 10],
-    xValues,
-  );
-  return xValues.map((x, index) => ({ x, y: yValues[index] }));
+  return xValues.map((x, index) => ({ x, y: targetYValues[index] }));
 }
+
+export function createMorphFunction(t: number) {}
